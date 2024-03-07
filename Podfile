@@ -6,5 +6,6 @@ target 'GrapesProject' do
   use_frameworks!
 
   # Pods for GrapesProject
+pod 'EPUBKit'
 
 end
