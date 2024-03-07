@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import EPUBKit
 
 struct LibraryView: View {
+    
     var body: some View {
         
         //-----Insert content library
