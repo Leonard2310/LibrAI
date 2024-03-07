@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
+import Observation
+
+@Observable
+class SharedData {
+    var Books = [
+        book(title: "A Game of Thrones", cover: "got"),
+        book(title: "The Lord of the Rings", cover: "lotr"),
+        book(title: "Harry Potter 3", cover: "hp")
+    ]
+}
+ var sharedData = SharedData()
+

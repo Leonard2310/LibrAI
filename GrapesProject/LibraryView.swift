@@ -1,21 +1,47 @@
 //
 //  LibraryView.swift
-//  GrapesProject
+//  test
 //
-//  Created by Salvatore Cangiano on 06/03/24.
+//  Created by Matteo Nasti on 07/03/24.
 //
 
 import SwiftUI
-import EPUBKit
+
 
 struct LibraryView: View {
-    
+    var Mydata = sharedData
     var body: some View {
-        
-        //-----Insert content library
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        //--------------
-        
+        VStack(alignment: .leading) {
+                Text ("Your Books")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.leading, 10.0)
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(Mydata.Books) {
+                            
+                        Book in
+                        VStack{
+                            Image (Book.cover)
+                            Text (Book.title)
+                                .padding(.bottom)
+                        }
+                    }
+                }
+                /*       Text ("Least Read")
+                ScrollView(.horizontal){
+                    HStack{
+                        ZStack{
+                            HStack{
+                                VStack{
+                                    
+                                }
+                            }
+                        }
+                    }
+                }*/
+            }
+        }
     }
 }
 
