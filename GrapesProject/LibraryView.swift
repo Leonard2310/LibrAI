@@ -25,8 +25,9 @@ struct LibraryView: View {
                             VStack{
                                 Image (Book.cover)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    
+                                    //.aspectRatio(contentMode: .fit)
+                                    .frame(width: 115, height: 182)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
                                 Text (Book.title)
                                     .padding([.leading, .bottom])
                             }
@@ -34,7 +35,7 @@ struct LibraryView: View {
                     }
                         
                     }
-                    /*Text ("Least Read")
+                    Text ("Least Read")
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.leading, 10.0)
@@ -47,12 +48,15 @@ struct LibraryView: View {
                              //Image(Background della view)
                              Image (Book.lastBackground)
                                  .resizable()
-                                 .aspectRatio(contentMode: .fit)
-                             
+                                 //.aspectRatio(contentMode: .fill)
+                                 .frame(width: 330, height: 190)
                                  .clipShape(RoundedRectangle(cornerRadius: 20))
                                  .padding(.leading, 31.0)
                              HStack{
                                  Image(Book.cover)
+                                     .resizable()
+                                     .frame(width: 100, height: 150)
+                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                  VStack{
                                      
                                  }
@@ -60,7 +64,7 @@ struct LibraryView: View {
                              }
                          }
                      }
-                }*/
+                }
             }
             .navigationTitle("Library")
         }
