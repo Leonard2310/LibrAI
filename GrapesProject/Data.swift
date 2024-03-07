@@ -8,9 +8,12 @@
 import Foundation
 import SwiftUI
 import Observation
+import EPUBKit
 
 @Observable
 class SharedData {
+    let path = Bundle.main.url(forResource: "frankenstein", withExtension: "epub"),
+        let document = EPUBDocument(url: path)
     var Books = [
         book(title: "A Game of Thrones", cover: "got"),
         book(title: "The Lord of the Rings", cover: "lotr"),
