@@ -8,9 +8,11 @@
 import Foundation
 import SwiftUI
 import Observation
+import EPUBKit
 
 @Observable
 class SharedData {
+    
     var Books = [
         book(title: "A Game of Thrones", cover: "got", lastBackground: "Back got"),
         book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "Back lotr"),

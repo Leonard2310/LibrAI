@@ -18,6 +18,8 @@
 		4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */; };
 		CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BC2B9A19C200E74112 /* Data.swift */; };
 		CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BE2B9A19CE00E74112 /* Book.swift */; };
+		CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */; };
+		CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		CE67F4BC2B9A19C200E74112 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CE67F4BE2B9A19CE00E74112 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "shelley-frankenstein.epub"; path = "ePub/shelley-frankenstein.epub"; sourceTree = SOURCE_ROOT; };
+		CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; path = ePub/A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				CE67F4BE2B9A19CE00E74112 /* Book.swift */,
 				4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */,
 				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
+				CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */,
+				CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
 			);
@@ -151,7 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */,
 				4DBD4AD92B98CDE000E7EF91 /* Preview Assets.xcassets in Resources */,
+				CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */,
 				4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

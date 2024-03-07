@@ -1,19 +1,36 @@
-//
-//  TryView.swift
-//  GrapesProject
-//
-//  Created by Salvatore Cangiano on 07/03/24.
-//
-
 import SwiftUI
 import EPUBKit
 
 struct TryView: View {
+    var path: URL?
+    var document: EPUBDocument?
+
+    init() {
+        // Inizializza path
+        self.path = Bundle.main.url(forResource: "shelley-frankenstein", withExtension: "epub")
+        
+        // Inizializza document se path non è nil
+        if let path = self.path {
+            self.document = EPUBDocument(url: path)
+        } else {
+            print("Impossibile trovare il file ePub.")
+        }
+    }
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if let title = document?.title {
+                    Text(title)
+                } else {
+                    Text("Nessun titolo disponibile")
+                }
     }
 }
 
-#Preview {
-    TryView()
+// Preview
+#if DEBUG
+struct TryView_Previews: PreviewProvider {
+    static var previews: some View {
+        TryView()
+    }
 }
+#endif
