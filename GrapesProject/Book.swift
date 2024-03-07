@@ -14,4 +14,5 @@ struct book:Identifiable{
     var author:String = "None"
     var read_time:Int = 1 //da rivedere. è a caso
     var last_chapter:Int = 0
+    var lastBackground: String = "noimage"
 }

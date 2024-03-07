@@ -1,6 +1,28 @@
 {
   "colors" : [
     {
+      "color" : {
+        "color-space" : "display-p3",
+        "components" : {
+          "alpha" : "1.000",
+          "blue" : "0.236",
+          "green" : "0.505",
+          "red" : "0.887"
+        }
+      },
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "platform" : "universal",
+        "reference" : "systemOrangeColor"
+      },
       "idiom" : "universal"
     }
   ],
