@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B30122B9A11F600B89C5A /* EPUBKit */; };
 		4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */; };
 		4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */; };
 		4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = GrapesProject;
+			packageProductDependencies = (
+				4D4B30122B9A11F600B89C5A /* EPUBKit */,
+			);
 			productName = GrapesProject;
 			productReference = 4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 4DBD4AC52B98CDDF00E7EF91;
+			packageReferences = (
+				4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */,
+			);
 			productRefGroup = 4DBD4ACF2B98CDDF00E7EF91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -356,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/witekbobrowski/EPUBKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D4B30122B9A11F600B89C5A /* EPUBKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */;
+			productName = EPUBKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DBD4AC62B98CDDF00E7EF91 /* Project object */;
 }
