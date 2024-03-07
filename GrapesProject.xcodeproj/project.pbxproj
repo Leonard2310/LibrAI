@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B30122B9A11F600B89C5A /* EPUBKit */; };
+		4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B30142B9A1A7C00B89C5A /* TryView.swift */; };
 		4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */; };
 		4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */; };
 		4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4B30142B9A1A7C00B89C5A /* TryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryView.swift; sourceTree = "<group>"; };
 		4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrapesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrapesProjectApp.swift; sourceTree = "<group>"; };
 		4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
 				4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */,
+				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
 			);
@@ -156,6 +159,7 @@
 			files = (
 				4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */,
 				4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */,
+				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,
 				4DBD4AE22B98CE3800E7EF91 /* CollectablesView.swift in Sources */,
 				4DBD4AE02B98CE1D00E7EF91 /* LibraryView.swift in Sources */,
 				4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */,
