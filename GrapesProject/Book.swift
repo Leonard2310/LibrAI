@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct book:Identifiable{
+    var id = UUID()
+    var title:String
+    var cover:String = "nocover"
+    var author:String = "None"
+    var read_time:Int = 1 //da rivedere. è a caso
+    var last_chapter:Int = 0
+}
