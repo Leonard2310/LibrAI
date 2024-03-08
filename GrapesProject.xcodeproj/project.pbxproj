@@ -20,6 +20,7 @@
 		CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BE2B9A19CE00E74112 /* Book.swift */; };
 		CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */; };
 		CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */; };
+		CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		CE67F4BE2B9A19CE00E74112 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "shelley-frankenstein.epub"; path = "GrapesProject/Books/shelley-frankenstein.epub"; sourceTree = SOURCE_ROOT; };
 		CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; path = GrapesProject/Books/A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; sourceTree = SOURCE_ROOT; };
+		CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveReadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */,
+				CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */,
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
 				CE67F4BC2B9A19C200E74112 /* Data.swift */,
@@ -182,6 +185,7 @@
 				4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */,
 				CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */,
 				CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */,
+				CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */,
 				4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */,
 				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,
 				4DBD4AE22B98CE3800E7EF91 /* CollectablesView.swift in Sources */,
@@ -323,7 +327,7 @@
 				DEVELOPMENT_TEAM = 9776FACC4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Mousy;
+				INFOPLIST_KEY_CFBundleDisplayName = LibrarAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -354,7 +358,7 @@
 				DEVELOPMENT_TEAM = 9776FACC4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Mousy;
+				INFOPLIST_KEY_CFBundleDisplayName = LibrarAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

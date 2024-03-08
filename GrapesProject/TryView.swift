@@ -4,6 +4,22 @@ import EPUBKit
 struct TryView: View {
     var path: URL?
     var document: EPUBDocument?
+    
+    func textFromePub(document : EPUBDocument) {
+        var contentDirectory = document.contentDirectory
+        var array: [String] = []
+        var path_array: [String] = []
+        for item in document.spine.items {
+            array.append(item.idref)
+        }
+        for item in document.manifest.items {
+            for idref in array {
+                if (idref == item.value.id) {
+                    path_array.append(item.value.path)
+                }
+            }
+        }
+    }
 
     init() {
         // Inizializza path
