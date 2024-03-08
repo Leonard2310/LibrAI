@@ -18,7 +18,7 @@ struct TryView: View {
     }
 
     var body: some View {
-        if let text = document?.tableOfContents.subTable? {
+        if let text = document?.title {
                     Text(text)
                 } else {
                     Text("Nessun titolo disponibile")
