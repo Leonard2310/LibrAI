@@ -11,7 +11,7 @@ struct CollectablesView: View {
     var body: some View {
         
         //-----Insert content collectable
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hewewello, World!")
         //--------------
         
     }
