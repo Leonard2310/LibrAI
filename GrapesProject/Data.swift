@@ -14,9 +14,9 @@ import EPUBKit
 class SharedData {
     
     var Books = [
-        book(title: "A Game of Thrones", cover: "got", lastBackground: "Back got"),
-        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "Back lotr"),
-        book(title: "Harry Potter 3", cover: "hp", lastBackground: "Back hp")
+        book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "Back got"),
+        book(title: "The Lord of the Rings", cover: "LotR", lastBackground: "Back lotr"),
+        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "Back hp")
     ]
 }
  var sharedData = SharedData()
