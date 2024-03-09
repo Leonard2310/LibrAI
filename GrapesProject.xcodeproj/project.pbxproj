@@ -17,6 +17,7 @@
 		4DBD4AE22B98CE3800E7EF91 /* CollectablesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */; };
 		4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */; };
 		861ED4CA2B9BBD590069F85A /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861ED4C92B9BBD590069F85A /* AddBookView.swift */; };
+		86E062FA2B9C9628001EDC0C /* AllBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E062F92B9C9628001EDC0C /* AllBooksView.swift */; };
 		CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BC2B9A19C200E74112 /* Data.swift */; };
 		CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BE2B9A19CE00E74112 /* Book.swift */; };
 		CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */; };
@@ -35,6 +36,7 @@
 		4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectablesView.swift; sourceTree = "<group>"; };
 		4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		861ED4C92B9BBD590069F85A /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
+		86E062F92B9C9628001EDC0C /* AllBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBooksView.swift; sourceTree = "<group>"; };
 		CE67F4BC2B9A19C200E74112 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CE67F4BE2B9A19CE00E74112 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "shelley-frankenstein.epub"; path = "GrapesProject/Books/shelley-frankenstein.epub"; sourceTree = SOURCE_ROOT; };
@@ -78,6 +80,7 @@
 				CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */,
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
+				86E062F92B9C9628001EDC0C /* AllBooksView.swift */,
 				861ED4C92B9BBD590069F85A /* AddBookView.swift */,
 				CE67F4BC2B9A19C200E74112 /* Data.swift */,
 				CE67F4BE2B9A19CE00E74112 /* Book.swift */,
@@ -193,6 +196,7 @@
 				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,
 				4DBD4AE22B98CE3800E7EF91 /* CollectablesView.swift in Sources */,
 				4DBD4AE02B98CE1D00E7EF91 /* LibraryView.swift in Sources */,
+				86E062FA2B9C9628001EDC0C /* AllBooksView.swift in Sources */,
 				4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */,
 				861ED4CA2B9BBD590069F85A /* AddBookView.swift in Sources */,
 			);

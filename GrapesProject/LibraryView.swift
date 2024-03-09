@@ -7,18 +7,22 @@
 
 import SwiftUI
 
-
 struct LibraryView: View {
     @State private var sheetvision = false
     @State public var searchText = ""
+    @State private var isSearching = false
     var Mydata = sharedData
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                    Text ("Your Books")
+                NavigationLink(destination: AllBooksView()){
+                    Label("Your Books", systemImage: "chevron.right")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundColor(Color.black)
                         .padding(.leading, 11.0)
+                }
+                    
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(Mydata.Books) {
@@ -80,7 +84,7 @@ struct LibraryView: View {
                 }
             }
             .navigationTitle("Library")
-            .searchable(text: $searchText)
+            .searchable(text: $searchText, isPresented: $isSearching)
             .toolbar(content: {
                 Button("Add", systemImage: "plus"){
                     sheetvision.toggle()
@@ -94,7 +98,7 @@ struct LibraryView: View {
    /* var searchResults: [String] {
         return Mydata.Books  book.title.filter { $0.contains(searchText) }
         }*/
-    }
+}
 
 #Preview {
     LibraryView()
