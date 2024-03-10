@@ -1,25 +1,38 @@
 import SwiftUI
 import EPUBKit
+import SwiftSoup
 
 struct TryView: View {
     var path: URL?
     var document: EPUBDocument?
     
-    func textFromePub(document : EPUBDocument) {
-        var contentDirectory = document.contentDirectory
+    func textFromePub(document: EPUBDocument) -> String? {
         var array: [String] = []
         var path_array: [String] = []
+
         for item in document.spine.items {
             array.append(item.idref)
         }
+
         for item in document.manifest.items {
             for idref in array {
-                if (idref == item.value.id) {
+                if idref == item.value.id {
                     path_array.append(item.value.path)
+                    do {
+                        // Assuming you have the actual HTML content in the path_array
+                        let html = try String(contentsOf: URL(fileURLWithPath: item.value.path))
+                        let doc = try SwiftSoup.parse(html)
+                        return try doc.text()
+                    } catch let error {
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }
+        return nil
     }
+
+
 
     init() {
         // Inizializza path

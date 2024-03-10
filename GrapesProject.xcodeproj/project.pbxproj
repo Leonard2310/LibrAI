@@ -24,6 +24,7 @@
 		CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */; };
 		CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */; };
 		CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */; };
+		CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0466D2B9E5FEC006EF99E /* SwiftSoup */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */,
+				CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = GrapesProject;
 			packageProductDependencies = (
 				4D4B30122B9A11F600B89C5A /* EPUBKit */,
+				CEB0466D2B9E5FEC006EF99E /* SwiftSoup */,
 			);
 			productName = GrapesProject;
 			productReference = 4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */;
@@ -162,6 +165,7 @@
 			mainGroup = 4DBD4AC52B98CDDF00E7EF91;
 			packageReferences = (
 				4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */,
+				CEB0466C2B9E5FEC006EF99E /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = 4DBD4ACF2B98CDDF00E7EF91 /* Products */;
 			projectDirPath = "";
@@ -422,6 +426,14 @@
 				minimumVersion = 0.4.0;
 			};
 		};
+		CEB0466C2B9E5FEC006EF99E /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -429,6 +441,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */;
 			productName = EPUBKit;
+		};
+		CEB0466D2B9E5FEC006EF99E /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB0466C2B9E5FEC006EF99E /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
