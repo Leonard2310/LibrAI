@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LibraryView: View {
     @State private var sheetvision = false
-    @State private var searchText = ""
+    @State var searchText = ""
     @State private var isSearching = false
     var Mydata = sharedData
     var body: some View {
@@ -25,7 +25,6 @@ struct LibraryView: View {
                         .foregroundColor(Color.black)
                         .padding(.leading, 11.0)
                 }
-                
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(Mydata.Books) {
@@ -99,23 +98,24 @@ struct LibraryView: View {
             )}
     }
 }
-  /*  var searchResults: [book] {
+    /*var searchResults: [book] {
         if searchText.isEmpty {
             return Mydata.Books
         } else {
             return Mydata.Books.filter { $0.contains(searchText) }
         }
-    }
-}
-func TitleList (){
+    }*/
+
+func TitleList () -> [String]{
     var mydata = sharedData
-    var NameList = [String]
-    ForEach(mydata.Books) {
-        Book in
-        
+    var NameList:[String] = []
+    for book in mydata.Books {
+        print(book.title)
+        NameList = [book.title]
     }
+    return NameList
 }
-   */
+   
 #Preview {
     LibraryView()
 }
