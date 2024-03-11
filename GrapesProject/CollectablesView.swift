@@ -63,13 +63,17 @@ struct CollectablesView: View {
                         ForEach(myData.ChallengeMice) {
                             Mouse in
                             VStack{
-                                Image(Mouse.mouseImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask(Circle())
-                                    .frame(width: 130, height: 130)
-                                    .padding(.leading, 11.0)
-                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
+                                ZStack{
+                                    Image(Mouse.mouseImage)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .mask(Circle())
+                                        .frame(width: 130, height: 130)
+                                        .padding(.leading, 11.0)
+                                        .blur(radius: 3)
+                                    Label("", systemImage: "lock.fill")
+                                        .padding(.leading, 15)
+                                }
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)
                             }
