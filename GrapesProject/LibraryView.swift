@@ -31,9 +31,7 @@ struct LibraryView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
-                        .padding(.leading, 11.0)
                     Label("", systemImage: "chevron.right")
-                        .padding(.trailing, 2.0)
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
@@ -50,7 +48,8 @@ struct LibraryView: View {
                                     .frame(width: 115, height: 182)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                 Text (Book.title)
-                                    .padding([.leading, .bottom])
+                                    .font(.footnote)
+                
                             }
                         }
                     }
@@ -59,18 +58,19 @@ struct LibraryView: View {
                 Text ("Least Read")
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.leading, 10.0)
-                TabView{
-                    ForEach(Mydata.Books) {
-                        Book in
-                        BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
-                    }
-                    .padding(.bottom, 80.0)
-                }
-                .tabViewStyle(.page(indexDisplayMode: .always))
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
-                .navigationTitle("Library")
             }
+            .padding(.leading)
+            
+            TabView{
+                ForEach(Mydata.Books) {
+                    Book in
+                    BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
+                }
+                .padding(.bottom, 80.0)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .navigationTitle("Library")
         }
         .navigationTitle("Library")
         .searchable(text: $searchText, isPresented: $isSearching)
