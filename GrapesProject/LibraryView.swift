@@ -50,45 +50,18 @@ struct LibraryView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .padding(.leading, 10.0)
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack{
-                        ForEach(Mydata.Books) {
-                            Book in
-                            ZStack{
-                                //Image(Background della view)
-                                Image (Book.lastBackground)
-                                    .resizable()
-                                    .frame(width: 330, height: 190)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                                    .padding(.leading, 31.0)
-                                Rectangle()
-                                    .frame(width: 330, height: 190)
-                                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                                    .padding(.leading, 31.0)
-                                    .opacity(0.6)
-                                HStack{
-                                    Image(Book.cover)
-                                        .resizable()
-                                        .frame(width: 100, height: 150)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                                    VStack{
-                                        Text("Da decidere")
-                                            .foregroundColor(Color.white)
-                                            .padding(.leading, 30.0)
-                                        Text("Da decidere")
-                                            .foregroundColor(Color.white)
-                                            .padding(.leading, 30.0)
-                                        Text("Da decidere")
-                                            .foregroundColor(Color.white)
-                                            .padding(.leading, 30.0)
-                                        
-                                    }
-                                }
-                            }
-                        }
+                TabView{
+                    ForEach(Mydata.Books) {
+                        Book in
+                        BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
                     }
+                    .padding(.bottom, 80.0)
                 }
+                .tabViewStyle(.page(indexDisplayMode: .always))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
+                .navigationTitle("Library")
             }
+        }
             .navigationTitle("Library")
             .searchable(text: $searchText, isPresented: $isSearching)
             .toolbar(content: {
@@ -101,7 +74,7 @@ struct LibraryView: View {
             }
             )}
     }
-}
+
     /*var searchResults: [book] {
         if searchText.isEmpty {
             return Mydata.Books
