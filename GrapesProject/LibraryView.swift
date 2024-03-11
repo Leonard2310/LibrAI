@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+func TitleList () -> [String]{
+    var mydata = sharedData
+    var NameList:[String] = []
+    for book in mydata.Books {
+            NameList.append(book.title)
+        }
+    return NameList
+}
+
+
 struct LibraryView: View {
     @State private var sheetvision = false
     @State var searchText = ""
@@ -27,7 +37,7 @@ struct LibraryView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
-                        
+                    
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
@@ -62,37 +72,24 @@ struct LibraryView: View {
                 .navigationTitle("Library")
             }
         }
-            .navigationTitle("Library")
-            .searchable(text: $searchText, isPresented: $isSearching)
-            .toolbar(content: {
-                Button("Add", systemImage: "plus"){
-                    sheetvision.toggle()
-                }
-                .sheet(isPresented: $sheetvision){
-                    AddBookView()
-                }
+        .navigationTitle("Library")
+        .searchable(text: $searchText, isPresented: $isSearching)
+        .toolbar(content: {
+            Button("Add", systemImage: "plus"){
+                sheetvision.toggle()
             }
-            )}
-    }
-
-    /*var searchResults: [book] {
-        if searchText.isEmpty {
-            return Mydata.Books
-        } else {
-            return Mydata.Books.filter { $0.contains(searchText) }
+            .sheet(isPresented: $sheetvision){
+                AddBookView()
+            }
         }
-    }*/
-
-func TitleList () -> [String]{
-    var mydata = sharedData
-    var NameList:[String] = []
-    for book in mydata.Books {
-        print(book.title)
-        NameList = [book.title]
+        )
+        /*var filteredBooks = BookArray.filter { String in
+            return String.lowercased().contains(searchText)
+        }*/
     }
-    return NameList
-}
+    
    
+}
 #Preview {
     LibraryView()
 }

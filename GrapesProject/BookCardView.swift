@@ -9,18 +9,19 @@ struct BookCardView: View {
             //Image(Background della view)
             Image (book.lastBackground)
                 .resizable()
-                .frame(width: 330, height: 190)
+                //.padding(.top, 5.0)
+                .frame(width: 330, height: 180)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
             Rectangle()
-                .frame(width: 330, height: 190)
+                .frame(width: 330, height: 180)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
                 .opacity(0.6)
             HStack{
                 Image(book.cover)
                     .resizable()
-                    .frame(width: 100, height: 150)
+                    .frame(width: 90, height: 140)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                 VStack{
                     Text("Da decidere")
@@ -35,8 +36,8 @@ struct BookCardView: View {
                     
                 }
             }
-            }
-        
+        }
+        .padding(.top, 35.0)
     }
 }
 
