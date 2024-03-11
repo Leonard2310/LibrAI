@@ -31,7 +31,7 @@ struct TryView: View {
     
     init() {
         // Initialize path
-        self.path = Bundle.main.url(forResource: "A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1", withExtension: "epub")
+        self.path = Bundle.main.url(forResource: "shelley-frankenstein", withExtension: "epub")
         
         // Initialize document if path is not nil
         if let path = self.path {
@@ -42,11 +42,8 @@ struct TryView: View {
     }
     
     var body: some View {
-        if let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!) {
-            Text(extractedText)
-        } else {
-            Text("Nessun testo disponibile")
-        }
+        let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!)
+        Text(extractedText!)
     }
 }
 
