@@ -11,6 +11,8 @@ struct BookCardView: View {
                 .resizable()
                 //.padding(.top, 5.0)
                 .frame(width: 330, height: 180)
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
             Rectangle()

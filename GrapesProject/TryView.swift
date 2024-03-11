@@ -8,16 +8,14 @@ struct TryView: View {
     
     func textFromePub(document: EPUBDocument) -> String? {
         var array: [String] = []
-        var path_array: [String] = []
 
         for item in document.spine.items {
             array.append(item.idref)
         }
-
+        
         for item in document.manifest.items {
             for idref in array {
                 if idref == item.value.id {
-                    path_array.append(item.value.path)
                     do {
                         let html = try String(contentsOf: URL(fileURLWithPath: item.value.path))
                         let doc = try SwiftSoup.parse(html)
@@ -30,27 +28,25 @@ struct TryView: View {
         }
         return nil
     }
-
-
-
+    
     init() {
-        // Inizializza path
+        // Initialize path
         self.path = Bundle.main.url(forResource: "shelley-frankenstein", withExtension: "epub")
         
-        // Inizializza document se path non è nil
+        // Initialize document if path is not nil
         if let path = self.path {
             self.document = EPUBDocument(url: path)
         } else {
             print("Impossibile trovare il file ePub.")
         }
     }
-
+    
     var body: some View {
-        if let text = document?.title {
-                    Text(text)
-                } else {
-                    Text("Nessun titolo disponibile")
-                }
+        if let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!) {   Text(extractedText)
+        }
+        else {
+            Text("NON TROVO NESSUN TESTO ESTRATTO")
+        }
     }
 }
 
