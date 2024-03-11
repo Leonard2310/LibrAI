@@ -38,8 +38,8 @@ struct TryView: View {
     
     var path: URL?
     var document: EPUBDocument?
-    var content: [String]?
-    var contentFiles: [URL]?
+    var content: [String]
+//    var contentFiles: [URL]?
     
     
     init() {
@@ -49,9 +49,12 @@ struct TryView: View {
         // Initialize document if path is not nil
         if let path = self.path {
             self.document = EPUBDocument(url: path)
+            print(self.document?.contentDirectory.absoluteString ?? "")
         } else {
             print("Impossibile trovare il file ePub.")
         }
+        
+        self.content = []
         
         var contentFiles: [URL] {
             guard let bundle = Bundle(path: self.document!.contentDirectory.path()) else {
@@ -100,10 +103,15 @@ struct TryView: View {
                     return []
                 }
         }
+        self.content = content
     }
     
     var body: some View {
-        Text("")
+        VStack {
+            ForEach (self.content, id:\.self) { string in
+                Text(string)
+            }
+        }
         /*
         if let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!) {   Text(extractedText)
         }
