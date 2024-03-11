@@ -11,19 +11,23 @@ struct LibraryView: View {
     @State private var sheetvision = false
     @State var searchText = ""
     @State private var isSearching = false
+    @State private var BookArray: [String] = TitleList()
     var Mydata = sharedData
     var body: some View {
         NavigationStack{
-            /*NavigationLink(destination: SearchbarView()) {
-             Text("oo")
-             }*/
             VStack(alignment: .leading) {
                 NavigationLink(destination: AllBooksView()){
-                    Label("Your Books", systemImage: "chevron.right")
+                    Text("Your Books")
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                         .padding(.leading, 11.0)
+                    Label("", systemImage: "chevron.right")
+                        .padding(.trailing, 2.0)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black)
+                        
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
