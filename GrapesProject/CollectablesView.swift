@@ -29,7 +29,7 @@ struct CollectablesView: View {
                                     .mask(Circle())
                                     .frame(width: 130, height: 130)
                                     .padding(.leading, 11.0)
-                                    .shadow(radius: 1)
+                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)
                             }
@@ -47,6 +47,7 @@ struct CollectablesView: View {
                                     .mask(Circle())
                                     .frame(width: 130, height: 130)
                                     .padding(.leading, 11.0)
+                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)
                             }
@@ -68,6 +69,7 @@ struct CollectablesView: View {
                                     .mask(Circle())
                                     .frame(width: 130, height: 130)
                                     .padding(.leading, 11.0)
+                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)
                             }
