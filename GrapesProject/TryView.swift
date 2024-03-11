@@ -42,8 +42,11 @@ struct TryView: View {
     }
     
     var body: some View {
-        let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!)
-        Text(extractedText!)
+        if let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!) {   Text(extractedText)
+        }
+        else {
+            Text("NON TROVO NESSUN TESTO ESTRATTO")
+        }
     }
 }
 
