@@ -7,5 +7,6 @@ target 'GrapesProject' do
 
   # Pods for GrapesProject
 pod 'EPUBKit'
+pod 'SwiftSoup'
 
 end

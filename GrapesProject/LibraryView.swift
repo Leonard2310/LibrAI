@@ -7,70 +7,89 @@
 
 import SwiftUI
 
+func TitleList () -> [String]{
+    var mydata = sharedData
+    var NameList:[String] = []
+    for book in mydata.Books {
+            NameList.append(book.title)
+        }
+    return NameList
+}
+
 
 struct LibraryView: View {
+    @State private var sheetvision = false
+    @State var searchText = ""
+    @State private var isSearching = false
+    @State private var BookArray: [String] = TitleList()
     var Mydata = sharedData
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                    Text ("Your Books")
+                NavigationLink(destination: AllBooksView()){
+                    Text("Your Books")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.leading, 11.0)
+                        .foregroundColor(Color.black)
+                    Label("", systemImage: "chevron.right")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.black)
+                    
+                }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(Mydata.Books) {
-                            
                             Book in
                             VStack{
                                 Image (Book.cover)
                                     .resizable()
-                                    //.aspectRatio(contentMode: .fit)
+                                //.aspectRatio(contentMode: .fit)
                                     .frame(width: 115, height: 182)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                 Text (Book.title)
-                                    .padding([.leading, .bottom])
+                                    .font(.footnote)
+                
                             }
                         }
                     }
-                        
-                    }
-                    Text ("Least Read")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.leading, 10.0)
-                     ScrollView(.horizontal, showsIndicators: false){
-                     HStack{
-                         ForEach(Mydata.Books) {
-                             
-                             Book in
-                         ZStack{
-                             //Image(Background della view)
-                             Image (Book.lastBackground)
-                                 .resizable()
-                                 //.aspectRatio(contentMode: .fill)
-                                 .frame(width: 330, height: 190)
-                                 .clipShape(RoundedRectangle(cornerRadius: 20))
-                                 .padding(.leading, 31.0)
-                             HStack{
-                                 Image(Book.cover)
-                                     .resizable()
-                                     .frame(width: 100, height: 150)
-                                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                                 VStack{
-                                     
-                                 }
-                             }
-                             }
-                         }
-                     }
+                    
                 }
+                Text ("Least Read")
+                    .font(.title)
+                    .fontWeight(.bold)
             }
+            .padding(.leading)
+            
+            TabView{
+                ForEach(Mydata.Books) {
+                    Book in
+                    BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
+                }
+                .padding(.bottom, 80.0)
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .indexViewStyle(.page(backgroundDisplayMode: .always))
             .navigationTitle("Library")
         }
+        .navigationTitle("Library")
+        .searchable(text: $searchText, isPresented: $isSearching)
+        .toolbar(content: {
+            Button("Add", systemImage: "plus"){
+                sheetvision.toggle()
+            }
+            .sheet(isPresented: $sheetvision){
+                AddBookView()
+            }
+        }
+        )
+        /*var filteredBooks = BookArray.filter { String in
+            return String.lowercased().contains(searchText)
+        }*/
     }
+    
+   
 }
-
 #Preview {
     LibraryView()
 }

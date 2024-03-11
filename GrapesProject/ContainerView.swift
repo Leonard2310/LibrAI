@@ -7,17 +7,16 @@
 
 import SwiftUI
 
-struct ContainerView: View {
+struct TabBar: View {
     var body: some View {
-        
-        //------Insert Tab Navigation--
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        //----------------
-        
-        
+        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
+            LibraryView().tabItem {Label("Library", systemImage: "books.vertical.fill" )}.tag(1)
+            CollectablesView().tabItem { Label("Collectables", systemImage: "trophy.fill") }.tag(2)
+        }
     }
 }
 
 #Preview {
-    ContainerView()
+    TabBar()
 }
+
