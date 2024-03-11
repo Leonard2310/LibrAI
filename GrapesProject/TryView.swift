@@ -19,7 +19,6 @@ struct TryView: View {
                 if idref == item.value.id {
                     path_array.append(item.value.path)
                     do {
-                        // Assuming you have the actual HTML content in the path_array
                         let html = try String(contentsOf: URL(fileURLWithPath: item.value.path))
                         let doc = try SwiftSoup.parse(html)
                         return try doc.text()
