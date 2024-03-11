@@ -7,28 +7,17 @@
 
 import SwiftUI
 
-func runSearch(query: String) { //funzione inutile
-    //@State var BookArray: [String] = TitleList()
-    let Mydata = sharedData
-    @State var FilteredBooks: [book] = []
-    let filteredBooks = Mydata.Books.filter {
-        book in
-        return book.title.lowercased().contains(query.lowercased())
-    }
-    if filteredBooks.isEmpty {
-        print("No books found for set query: \(query)")
-    } else {
-        print("Books found for '\(query)':")
-        for book in filteredBooks {
-            print("- \(book)")
-        }
-    }
-}
     struct LibraryView: View {
+        var Mydata = sharedData
         @State private var sheetvision = false
         @State var searchText = ""
         @State private var isSearching = false
-        var Mydata = sharedData
+        var FilteredBooks: [book] {
+            guard !searchText.isEmpty else { return Mydata.Books}
+            return Mydata.Books.filter{
+                $0.title.localizedCaseInsensitiveContains(searchText)
+            }
+        }
         var body: some View {
             NavigationStack{
                 VStack(alignment: .leading) {
@@ -41,11 +30,10 @@ func runSearch(query: String) { //funzione inutile
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(Color.black)
-                        
                     }
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack{
-                            ForEach(Mydata.Books) {
+                            ForEach(FilteredBooks) {
                                 Book in
                                 VStack{
                                     NavigationLink(destination: ImmersiveReadingView()) {
@@ -63,13 +51,17 @@ func runSearch(query: String) { //funzione inutile
                         }
                         
                     }
-                    Text ("Least Read")
-                        .font(.title)
-                        .fontWeight(.bold)
+                    
                 }
                 .padding(.leading)
-                
+                Text ("Least Read")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.trailing, 230.0)
+                    .padding(.top,20.0)
+                    .padding(.leading)
                 TabView{
+                    
                     ForEach(Mydata.Books) {
                         Book in
                         BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
@@ -81,7 +73,7 @@ func runSearch(query: String) { //funzione inutile
                 .navigationTitle("Library")
             }
             .navigationTitle("Library")
-            .searchable(text: $searchText, isPresented: $isSearching)
+            .searchable(text: $searchText, prompt: "Search a book")
             .toolbar(content: {
                 Button("Add", systemImage: "plus"){
                     sheetvision.toggle()
@@ -91,9 +83,6 @@ func runSearch(query: String) { //funzione inutile
                 }
             }
             )
-            /*var filteredBooks = BookArray.filter { String in
-             return String.lowercased().contains(searchText)
-             }*/
         }
     
 }

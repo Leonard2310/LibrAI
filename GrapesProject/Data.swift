@@ -15,8 +15,8 @@ class SharedData {
     
     var Books = [
         book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
-        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "HPIII_Background"),
-        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "LOTR_Background")
+        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
+        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background")
     ]
     
     var Mice1 = [
