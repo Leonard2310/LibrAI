@@ -10,16 +10,18 @@ struct BookCardView: View {
             Image (book.lastBackground)
                 .resizable()
                 //.padding(.top, 5.0)
-                .frame(width: 330, height: 180)
-                .aspectRatio(contentMode: .fill)
+                .aspectRatio(contentMode: .fill)                
+                .frame(width: 330, height: 190)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+            
+                //.padding(.leading, 31.0)
+            Rectangle()
+                .fill(LinearGradient(colors: [Color.clear, Color.black.opacity(0.8)], startPoint: .leading, endPoint: .trailing))
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
-            Rectangle()
-                .frame(width: 330, height: 180)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                //.padding(.leading, 31.0)
-                .opacity(0.6)
+                
+    
             HStack{
                 Image(book.cover)
                     .resizable()
