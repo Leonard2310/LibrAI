@@ -21,6 +21,7 @@ struct TryView: View {
                         let doc = try SwiftSoup.parse(html)
                         return try doc.text()
                     } catch let error {
+                        print(String(item.value.path))
                         print(error.localizedDescription)
                     }
                 }
@@ -45,7 +46,7 @@ struct TryView: View {
         if let extractedText = textFromePub(document: (document ?? EPUBDocument(url: self.path!))!) {   Text(extractedText)
         }
         else {
-            Text("NON TROVO NESSUN TESTO ESTRATTO")
+            Text("Nessun testo disponibile")
         }
     }
 }
