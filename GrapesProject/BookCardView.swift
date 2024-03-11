@@ -9,6 +9,7 @@ struct BookCardView: View {
             //Image(Background della view)
             Image (book.lastBackground)
                 .resizable()
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
