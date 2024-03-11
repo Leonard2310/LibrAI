@@ -17,7 +17,8 @@ struct TryView: View {
             for idref in array {
                 if idref == item.value.id {
                     do {
-                        let html = try String(contentsOf: URL(fileURLWithPath: item.value.path))
+                        let html = try String(contentsOfFile: "/Users/salvatorecangiano/Desktop/shelley-frankenstein/OEBPS/" + item.value.path, encoding: .utf8)
+
                         let doc = try SwiftSoup.parse(html)
                         return try doc.text()
                     } catch let error {

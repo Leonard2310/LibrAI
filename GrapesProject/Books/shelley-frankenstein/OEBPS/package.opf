@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" version="3.0" xml:lang="en" unique-identifier="pub-identifier">
+  <metadata>
+    <dc:identifier id="pub-identifier">_simple_book</dc:identifier>
+    <meta id="meta-identifier" property="dcterms:identifier">_simple_book</meta>
+    <dc:title id="pub-title">Frankenstein</dc:title>
+    <meta property="dcterms:title" id="meta-title">Frankenstein</meta>
+    <dc:language id="pub-language">en</dc:language>
+    <meta property="dcterms:language" id="meta-language">en</meta>
+    <meta property="dcterms:modified">2014-03-13T17:08:40Z</meta>
+    <!--The preceding date value is actually local time (not UTC) in UTC format because there is no function in XSLT 1.0 to generate a correct UTC time-->
+    <meta content="cover-image" name="cover"/>
+    <meta id="meta-creator2" property="dcterms:creator">Mary Wollstonecraft Shelley</meta>
+    <dc:creator id="pub-creator2">Mary Wollstonecraft Shelley</dc:creator>
+    <meta property="dcterms:date">2014-03-13</meta>
+    <dc:date>2014-03-13</dc:date>
+    <meta property="dcterms:publisher">epubBooks Classics</meta>
+    <dc:publisher>epubBooks Classics</dc:publisher>
+    <meta property="dcterms:rights">Copyright © 2014 epubBooks</meta>
+    <dc:rights>Copyright © 2014 epubBooks</dc:rights>
+    <meta property="dcterms:rightsHolder">epubBooks</meta>
+    <meta property="dcterms:subject">Classic Horror &amp; Ghost Stories</meta>
+    <dc:subject>Classic Horror &amp; Ghost Stories</dc:subject>
+    <meta property="dcterms:subject">Classic Science Fiction</meta>
+    <dc:subject>Classic Science Fiction</dc:subject>
+  </metadata>
+  <manifest>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+    <item id="htmltoc" properties="nav" media-type="application/xhtml+xml" href="bk01-toc.xhtml"/>
+    <item media-type="text/css" id="html-css" href="epubbooks.css"/>
+    <item media-type="text/css" id="docbook-css" href="docbook-epub.css"/>
+    <item id="cover" href="cover.xhtml" media-type="application/xhtml+xml"/>
+    <item id="cover-image" properties="cover-image" href="epubbooks-cover.jpg" media-type="image/jpeg"/>
+    <item id="id-id1172294508836" href="index.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295251680" href="pr01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294501906" href="pr02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295589460" href="pr03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294502309" href="pr04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295593366" href="ch01.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295253234" href="ch02.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294510228" href="ch03.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294505334" href="ch04.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295589848" href="ch05.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295591664" href="ch06.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295594339" href="ch07.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295252545" href="ch08.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295253360" href="ch09.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294640454" href="ch10.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295592820" href="ch11.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294502834" href="ch12.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295586921" href="ch13.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172296081944" href="ch14.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295092778" href="ch15.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294495221" href="ch16.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172296164753" href="ch17.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294652024" href="ch18.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294923723" href="ch19.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295417826" href="ch20.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294494209" href="ch21.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295253425" href="ch22.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172295412906" href="ch23.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id-id1172294508514" href="ch24.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="cover" linear="no"/>
+    <itemref idref="htmltoc" linear="yes"/>
+    <itemref idref="id-id1172294508836"/>
+    <itemref idref="id-id1172295251680"/>
+    <itemref idref="id-id1172294501906"/>
+    <itemref idref="id-id1172295589460"/>
+    <itemref idref="id-id1172294502309"/>
+    <itemref idref="id-id1172295593366"/>
+    <itemref idref="id-id1172295253234"/>
+    <itemref idref="id-id1172294510228"/>
+    <itemref idref="id-id1172294505334"/>
+    <itemref idref="id-id1172295589848"/>
+    <itemref idref="id-id1172295591664"/>
+    <itemref idref="id-id1172295594339"/>
+    <itemref idref="id-id1172295252545"/>
+    <itemref idref="id-id1172295253360"/>
+    <itemref idref="id-id1172294640454"/>
+    <itemref idref="id-id1172295592820"/>
+    <itemref idref="id-id1172294502834"/>
+    <itemref idref="id-id1172295586921"/>
+    <itemref idref="id-id1172296081944"/>
+    <itemref idref="id-id1172295092778"/>
+    <itemref idref="id-id1172294495221"/>
+    <itemref idref="id-id1172296164753"/>
+    <itemref idref="id-id1172294652024"/>
+    <itemref idref="id-id1172294923723"/>
+    <itemref idref="id-id1172295417826"/>
+    <itemref idref="id-id1172294494209"/>
+    <itemref idref="id-id1172295253425"/>
+    <itemref idref="id-id1172295412906"/>
+    <itemref idref="id-id1172294508514"/>
+  </spine>
+  <guide>
+    <reference href="cover.xhtml" type="cover" title="Cover"/>
+    <reference href="bk01-toc.xhtml" type="toc" title="Table of Contents"/>
+  </guide>
+</package>

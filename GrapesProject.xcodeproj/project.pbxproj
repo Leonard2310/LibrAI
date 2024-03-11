@@ -10,6 +10,7 @@
 		0953AD372B9F3B4B0098CE8A /* BookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD362B9F3B4B0098CE8A /* BookCardView.swift */; };
 		4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B30122B9A11F600B89C5A /* EPUBKit */; };
 		4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B30142B9A1A7C00B89C5A /* TryView.swift */; };
+		4D5968C02B9F51CA005931FB /* shelley-frankenstein in Resources */ = {isa = PBXBuildFile; fileRef = 4D5968BF2B9F51CA005931FB /* shelley-frankenstein */; };
 		4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */; };
 		4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */; };
 		4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0953AD362B9F3B4B0098CE8A /* BookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardView.swift; sourceTree = "<group>"; };
 		4D4B30142B9A1A7C00B89C5A /* TryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryView.swift; sourceTree = "<group>"; };
+		4D5968BF2B9F51CA005931FB /* shelley-frankenstein */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "shelley-frankenstein"; sourceTree = "<group>"; };
 		4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrapesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrapesProjectApp.swift; sourceTree = "<group>"; };
 		4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		CEAFC0FD2B9B3FFE003A8D55 /* Books */ = {
 			isa = PBXGroup;
 			children = (
+				4D5968BF2B9F51CA005931FB /* shelley-frankenstein */,
 				CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */,
 				CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */,
 			);
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */,
+				4D5968C02B9F51CA005931FB /* shelley-frankenstein in Resources */,
 				4DBD4AD92B98CDE000E7EF91 /* Preview Assets.xcassets in Resources */,
 				CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */,
 				4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */,
