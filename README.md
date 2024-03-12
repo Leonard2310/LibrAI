@@ -14,11 +14,11 @@ The concept of **LibrarAI** stems from the Italian term "topo da biblioteca," me
 ## Getting Started
 To get started with **LibrarAI**, clone the repository and follow the setup instructions below.
 ### Prerequisites
-- iOS 13.0 or later
-- Xcode 11 or later
+- iOS 17.2 or later
+- Xcode 15.2 or later
 
 ### Installation
-1. Clone the repository:  git clone https://github.com/Leonard2310/GrapesProject.git
+1. Clone the repository:  git clone https://github.com/Leonard2310/LibrarAI.git
 2. Open the project in Xcode:  open GrapesProject.xcodeproj
 3. Build and run the application on your device or simulator.
 
