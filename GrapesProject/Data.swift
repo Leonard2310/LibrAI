@@ -17,9 +17,9 @@ class SharedData {
         book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
         book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
         book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background"),
-        book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
-        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
-        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background")
+        book(title: "Percy Jackson", cover: "Percy Jackson", lastBackground: "GoT_Background"),
+        book(title: "Little Prince", cover: "Little Prince", lastBackground: "LOTR_Background"),
+        book(title: "The Talisman", cover: "The Talisman", lastBackground: "HPIII_Background")
     ]
     
     var Mice1 = [
