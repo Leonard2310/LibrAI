@@ -1,8 +1,8 @@
 //
-//  MouseView.swift
+//  Mouse.swift
 //  GrapesProject
 //
-//  Created by Chiara Cortese on 11/03/24.
+//  Created by Leonardo Catello on 12/03/24.
 //
 
 import Foundation
@@ -10,5 +10,5 @@ import Foundation
 struct mouse: Identifiable{
     var id = UUID()
     var mouseName: String
-    var mouseImage: String 
+    var mouseImage: String
 }
