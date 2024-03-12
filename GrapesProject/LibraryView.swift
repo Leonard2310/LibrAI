@@ -85,6 +85,22 @@ struct LibraryView: View {
                         let fileURL = try result.get().first!
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
+
+                        // Aggiungi il file alla cartella "Books" nella directory dell'app
+                        let fileManager = FileManager.default
+                        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+                        let booksDirectory = documentsDirectory.appendingPathComponent("Books")
+                        let destinationURL = booksDirectory.appendingPathComponent(fileURL.lastPathComponent)
+
+                        // Crea la cartella "Books" se non esiste
+                        if !fileManager.fileExists(atPath: booksDirectory.path) {
+                            try fileManager.createDirectory(at: booksDirectory, withIntermediateDirectories: true, attributes: nil)
+                        }
+
+                        // Copia il file nella cartella "Books"
+                        if !fileManager.fileExists(atPath: destinationURL.path) {
+                            try fileManager.copyItem(at: fileURL, to: destinationURL)
+                        }
                     } catch {
                         print("Errore nell'importazione del file: \(error)")
                     }
