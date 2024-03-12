@@ -23,9 +23,9 @@ class SharedData {
     ]
     
     var LastReadBooks = [
-        book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
-        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
-        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background")
+        book(title: "A Game of Thrones", cover: "GoT-I&F", author: "George R. R. Martin", lastBackground: "GoT_Background"),
+        book(title: "The Lord of the Rings", cover: "lotr", author: "J. R. R. Tolkien", lastBackground: "LOTR_Background"),
+        book(title: "Harry Potter 3", cover: "HPIII", author: "J. K. Rowling",lastBackground: "HPIII_Background")
     ]
     
     var Mice1 = [
