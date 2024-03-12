@@ -85,11 +85,10 @@
 		4DBD4AD02B98CDDF00E7EF91 /* GrapesProject */ = {
 			isa = PBXGroup;
 			children = (
-				CEFE3B5E2BA08FAF0083D433 /* TextExtraction.swift */,
+				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
 				4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */,
-				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */,
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				0953AD362B9F3B4B0098CE8A /* BookCardView.swift */,
@@ -100,6 +99,7 @@
 				CEFE3B602BA09DF80083D433 /* Mouse.swift */,
 				CE67F4BC2B9A19C200E74112 /* Data.swift */,
 				CE67F4BE2B9A19CE00E74112 /* Book.swift */,
+				CEFE3B5E2BA08FAF0083D433 /* TextExtraction.swift */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				CEAFC0FD2B9B3FFE003A8D55 /* Books */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
