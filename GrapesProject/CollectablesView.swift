@@ -36,6 +36,7 @@ struct CollectablesView: View {
                         }
                     }
                 }
+            
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack{
                         ForEach(myData.Mice2) {

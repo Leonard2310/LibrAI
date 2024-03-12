@@ -17,25 +17,29 @@ struct AllBooksView: View {
         }
     }
     var body: some View {
+        let columns = [GridItem(.fixed(160)), GridItem(.fixed(160))]
         NavigationStack(){
             //Text("All books")
                 //.font(.title3)
             ScrollView(showsIndicators: false){
-                ForEach(FilteredBooks) {
-                    Book in
-                    VStack{
-                        NavigationLink(destination: ImmersiveReadingView()) {
-                            Image (Book.cover)
-                                .resizable()
-                            //.aspectRatio(contentMode: .fit)
-                                .frame(width: 115, height: 182)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                
+                LazyVGrid(columns: columns){
+                    ForEach(FilteredBooks) {
+                        Book in
+                        VStack{
+                            NavigationLink(destination: ImmersiveReadingView()) {
+                                Image (Book.cover)
+                                    .resizable()
+                                //.aspectRatio(contentMode: .fit)
+                                    .frame(width: 115, height: 182)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                            Text (Book.title)
+                                .font(.footnote)
+                            
                         }
-                        Text (Book.title)
-                            .font(.footnote)
                         
                     }
-                    
                 }
             }
             .navigationTitle("All Books")
