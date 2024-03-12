@@ -98,7 +98,7 @@ func extractContent(document: EPUBDocument?) -> [String] {
         }
 }
 
-func textFromEPub(document: EPUBDocument) -> [String]? {
+func indexFromEPub(document: EPUBDocument) -> [String]? {
     var IDarray: [String] = []
     var CHarray: [String] = []
     
