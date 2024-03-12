@@ -9,7 +9,7 @@ import Foundation
 import OpenAI
 import SwiftOpenAI
 
-let openAI = SwiftOpenAI(apiKey: "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")
+public let openAI = SwiftOpenAI(apiKey: "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")
 
 func ImageGeneration(textPrompt: String, completion: @escaping (String?) -> Void) async {
     do {
