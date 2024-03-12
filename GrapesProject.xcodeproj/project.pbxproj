@@ -59,6 +59,7 @@
 		CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtilities.swift; sourceTree = "<group>"; };
 		CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFuncUtilities.swift; sourceTree = "<group>"; };
 		CEFE3B6E2BA0B3770083D433 /* AITryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITryView.swift; sourceTree = "<group>"; };
+		CEFE3B702BA0BC6D0083D433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 		4DBD4AD02B98CDDF00E7EF91 /* GrapesProject */ = {
 			isa = PBXGroup;
 			children = (
+				CEFE3B702BA0BC6D0083D433 /* Info.plist */,
 				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
@@ -375,6 +377,7 @@
 				DEVELOPMENT_TEAM = 9776FACC4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GrapesProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LibrarAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -406,6 +409,7 @@
 				DEVELOPMENT_TEAM = 9776FACC4Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GrapesProject/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = LibrarAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
