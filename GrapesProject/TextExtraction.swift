@@ -20,16 +20,20 @@ func loadEPUBDocument(from path: URL?) -> EPUBDocument? {
     return document
 }
 
-func extractCover(document: EPUBDocument?) -> String {
-    return ""
+func extractCover(document: EPUBDocument?) -> URL? {
+    return document?.cover
 }
 
-func extractTitle(document: EPUBDocument?) -> String {
-    return ""
+func extractTitle(document: EPUBDocument!) -> String {
+    if document.title != nil {
+        return document!.title!
+    }else{
+        return "Titolo non disponibile"
+    }
 }
 
 func extractAuthor(document: EPUBDocument?) -> String {
-    return ""
+    return document!.author!
 }
 
 func extractContent(document: EPUBDocument?) -> [String] {
