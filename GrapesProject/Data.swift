@@ -15,8 +15,11 @@ class SharedData {
     
     var Books = [
         book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
-        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "HPIII_Background"),
-        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "LOTR_Background")
+        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
+        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background"),
+        book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
+        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
+        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background")
     ]
     
     var Mice1 = [
@@ -38,12 +41,10 @@ class SharedData {
     ]
     
     var ChallengeMice = [
-        mouse(mouseName: "Pirate Mouse", mouseImage: "Pirate Mouse"),
-        mouse(mouseName: "King Mouse", mouseImage: "KingMouse"),
-        mouse(mouseName: "Darth Mouse", mouseImage: "DarthMouse"),
-        mouse(mouseName: "Magic Mouse", mouseImage: "Magic Mouse"),
-        mouse(mouseName: "Unicorn Mouse", mouseImage: "unicorn mouse"),
-        mouse(mouseName: "Wizard Of OZ Mouse", mouseImage: "wizard of oz Mouse")
+        mouse(mouseName: "Rich Mouse", mouseImage: "RichMouse"),
+        mouse(mouseName: "Supportive Mouse", mouseImage: "GrapeMouse"),
+        mouse(mouseName: "Editor Mouse", mouseImage: "EditorMouse"),
+        mouse(mouseName: "Bug Fixer Mouse", mouseImage: "BugFixerMouse")
     ]
 }
  var sharedData = SharedData()

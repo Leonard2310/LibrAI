@@ -23,10 +23,12 @@ struct BookCardView: View {
                 
     
             HStack{
-                Image(book.cover)
-                    .resizable()
-                    .frame(width: 90, height: 140)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                NavigationLink(destination: ImmersiveReadingView()) {
+                    Image(book.cover)
+                        .resizable()
+                        .frame(width: 90, height: 140)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
                 VStack{
                     Text("Da decidere")
                         .foregroundColor(Color.white)
