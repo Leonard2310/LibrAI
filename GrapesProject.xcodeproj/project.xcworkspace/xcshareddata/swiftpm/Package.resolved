@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "swiftopenai",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftBeta/SwiftOpenAI",
+      "state" : {
+        "revision" : "2b7f640c51348693505529daf7f1fc897e73dfff",
+        "version" : "1.4.1"
+      }
+    },
+    {
       "identity" : "swiftsoup",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/scinfu/SwiftSoup.git",
