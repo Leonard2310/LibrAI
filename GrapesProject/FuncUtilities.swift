@@ -15,11 +15,11 @@ var content: [String]?
 
 func loadEPUBDocument(from path: URL?) -> EPUBDocument? {
     guard let path = path else {
-        print("Impossibile trovare il file ePub.")
+        print("Unable to find the EPUB file.")
         return nil
     }
     guard let document = EPUBDocument(url: path) else {
-        print("Documento EPUB non valido.")
+        print("Invalid EPUB document.")
         return nil
     }
     dump(document)
@@ -35,7 +35,7 @@ func extractTitle(document: EPUBDocument!) -> String {
     if document.title != nil {
         return document!.title!
     }else{
-        return "Titolo non disponibile"
+        return "Title not available."
     }
 }
 
@@ -43,13 +43,13 @@ func extractAuthor(document: EPUBDocument?) -> String {
     if document?.author != nil {
         return document!.author!
     }else{
-        return "Autore non disponibile"
+        return "Author not available."
     }
 }
 
 func extractContent(document: EPUBDocument?) -> [String] {
     guard let document = document else {
-        print("Documento EPUB non fornito.")
+        print("Unable to find the EPUB file.")
         return []
     }
     guard let bundle = Bundle(path: document.contentDirectory.path()) else {
@@ -97,4 +97,23 @@ func extractContent(document: EPUBDocument?) -> [String] {
             }
         }
 }
+
+func indexFromEPub(document: EPUBDocument) -> [String]? {
+    var IDarray: [String] = []
+    var CHarray: [String] = []
+    
+    for item in document.spine.items {
+        IDarray.append(item.idref)
+    }
+    
+    for item in document.manifest.items {
+        for idref in IDarray {
+            if idref == item.value.id {
+                CHarray.append(item.value.path)
+            }
+        }
+    }
+    return CHarray.isEmpty ? nil : CHarray
+}
+
 

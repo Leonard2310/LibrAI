@@ -29,16 +29,14 @@ struct BookCardView: View {
                         .frame(width: 90, height: 140)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
-                VStack{
-                    Text("Da decidere")
+                VStack (alignment: .leading){
+                    Text(book.title)
+                        .font(.title3)
+                        .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
-                    Text("Da decidere")
+                        
+                    Text(book.author)
                         .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
-                    Text("Da decidere")
-                        .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
                     
                 }
             }
@@ -48,5 +46,5 @@ struct BookCardView: View {
 }
 
 #Preview {
-    BookCardView(book: book(title: "A Game Of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"))
+    BookCardView(book: book(title: "A Game Of Thrones", cover: "GoT-I&F",author: "George R. R. Martin", lastBackground: "GoT_Background"))
 }

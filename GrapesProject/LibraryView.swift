@@ -16,15 +16,21 @@ struct LibraryView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                NavigationLink(destination: AllBooksView()){
-                    Text("Your Books")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                    Label("", systemImage: "chevron.right")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
+                ZStack {
+                    NavigationLink(destination: AllBooksView()){
+                        Rectangle()
+                            .foregroundStyle(Color.clear)
+                            
+                    }
+                    HStack {
+                        Text("Your Books")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        Label("", systemImage: "chevron.right")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    .padding(.trailing, 190)
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
@@ -51,7 +57,7 @@ struct LibraryView: View {
             .padding(.leading)
             Text ("Least Read")
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .padding(.trailing, 230.0)
                 .padding(.top,20.0)
                 .padding(.leading)
@@ -59,7 +65,7 @@ struct LibraryView: View {
 
                 ForEach(Mydata.LastReadBooks) {
                     Book in
-                    BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
+                    BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
                 }
                 .padding(.bottom, 80.0)
             }
@@ -77,11 +83,25 @@ struct LibraryView: View {
                 ) { result in
                     do {
                         let fileURL = try result.get().first!
-                        // Qui puoi gestire il file importato
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
+
+                        // Aggiungi il file alla cartella "Books" nella directory dell'app
+                        let fileManager = FileManager.default
+                        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+                        let booksDirectory = documentsDirectory.appendingPathComponent("Books")
+                        let destinationURL = booksDirectory.appendingPathComponent(fileURL.lastPathComponent)
+
+                        // Crea la cartella "Books" se non esiste
+                        if !fileManager.fileExists(atPath: booksDirectory.path) {
+                            try fileManager.createDirectory(at: booksDirectory, withIntermediateDirectories: true, attributes: nil)
+                        }
+
+                        // Copia il file nella cartella "Books"
+                        if !fileManager.fileExists(atPath: destinationURL.path) {
+                            try fileManager.copyItem(at: fileURL, to: destinationURL)
+                        }
                     } catch {
-                        // Gestisci l'errore
                         print("Errore nell'importazione del file: \(error)")
                     }
                 }
