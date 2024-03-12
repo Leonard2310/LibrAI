@@ -16,15 +16,21 @@ struct LibraryView: View {
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                NavigationLink(destination: AllBooksView()){
-                    Text("Your Books")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
-                    Label("", systemImage: "chevron.right")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.black)
+                ZStack {
+                    NavigationLink(destination: AllBooksView()){
+                        Rectangle()
+                            .foregroundStyle(Color.clear)
+                            
+                    }
+                    HStack {
+                        Text("Your Books")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                        Label("", systemImage: "chevron.right")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                    }
+                    .padding(.trailing, 190)
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     HStack{
@@ -51,13 +57,13 @@ struct LibraryView: View {
             .padding(.leading)
             Text ("Least Read")
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .padding(.trailing, 230.0)
                 .padding(.top,20.0)
                 .padding(.leading)
             TabView{
 
-                ForEach(Mydata.Books) {
+                ForEach(Mydata.LastReadBooks) {
                     Book in
                     BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
                 }

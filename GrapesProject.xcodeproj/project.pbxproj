@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0953AD372B9F3B4B0098CE8A /* BookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD362B9F3B4B0098CE8A /* BookCardView.swift */; };
 		0953AD3B2B9F529F0098CE8A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */; };
+		0953AD412BA0A1130098CE8A /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD402BA0A1130098CE8A /* BookView.swift */; };
 		4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B30122B9A11F600B89C5A /* EPUBKit */; };
 		4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B30142B9A1A7C00B89C5A /* TryView.swift */; };
 		4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */; };
@@ -28,11 +29,14 @@
 		CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0466D2B9E5FEC006EF99E /* SwiftSoup */; };
 		CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B602BA09DF80083D433 /* Mouse.swift */; };
 		CEFE3B632BA09EDF0083D433 /* FuncUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */; };
+		CEFE3B652BA0A6860083D433 /* AIFuncUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */; };
+		CEFE3B682BA0A6B00083D433 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CEFE3B672BA0A6B00083D433 /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0953AD362B9F3B4B0098CE8A /* BookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardView.swift; sourceTree = "<group>"; };
 		0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0953AD402BA0A1130098CE8A /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		4D4B30142B9A1A7C00B89C5A /* TryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryView.swift; sourceTree = "<group>"; };
 		4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrapesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrapesProjectApp.swift; sourceTree = "<group>"; };
@@ -51,6 +55,7 @@
 		CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveReadingView.swift; sourceTree = "<group>"; };
 		CEFE3B602BA09DF80083D433 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
 		CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtilities.swift; sourceTree = "<group>"; };
+		CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFuncUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */,
+				CEFE3B682BA0A6B00083D433 /* OpenAI in Frameworks */,
 				CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +99,7 @@
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				0953AD362B9F3B4B0098CE8A /* BookCardView.swift */,
 				86E062F92B9C9628001EDC0C /* AllBooksView.swift */,
+				0953AD402BA0A1130098CE8A /* BookView.swift */,
 				861ED4C92B9BBD590069F85A /* AddBookView.swift */,
 				4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */,
 				0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */,
@@ -100,6 +107,7 @@
 				CE67F4BC2B9A19C200E74112 /* Data.swift */,
 				CE67F4BE2B9A19CE00E74112 /* Book.swift */,
 				CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */,
+				CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				CEAFC0FD2B9B3FFE003A8D55 /* Books */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
@@ -143,6 +151,7 @@
 			packageProductDependencies = (
 				4D4B30122B9A11F600B89C5A /* EPUBKit */,
 				CEB0466D2B9E5FEC006EF99E /* SwiftSoup */,
+				CEFE3B672BA0A6B00083D433 /* OpenAI */,
 			);
 			productName = GrapesProject;
 			productReference = 4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */;
@@ -175,6 +184,7 @@
 			packageReferences = (
 				4D4B30112B9A11F600B89C5A /* XCRemoteSwiftPackageReference "EPUBKit" */,
 				CEB0466C2B9E5FEC006EF99E /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				CEFE3B662BA0A6B00083D433 /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 4DBD4ACF2B98CDDF00E7EF91 /* Products */;
 			projectDirPath = "";
@@ -206,6 +216,7 @@
 			files = (
 				0953AD3B2B9F529F0098CE8A /* BackgroundView.swift in Sources */,
 				4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */,
+				CEFE3B652BA0A6860083D433 /* AIFuncUtilities.swift in Sources */,
 				CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */,
 				CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */,
 				CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */,
@@ -219,6 +230,7 @@
 				4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */,
 				861ED4CA2B9BBD590069F85A /* AddBookView.swift in Sources */,
 				CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */,
+				0953AD412BA0A1130098CE8A /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +458,14 @@
 				minimumVersion = 2.7.1;
 			};
 		};
+		CEFE3B662BA0A6B00083D433 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -458,6 +478,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEB0466C2B9E5FEC006EF99E /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		CEFE3B672BA0A6B00083D433 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEFE3B662BA0A6B00083D433 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

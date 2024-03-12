@@ -22,6 +22,12 @@ class SharedData {
         book(title: "The Talisman", cover: "The Talisman", lastBackground: "HPIII_Background")
     ]
     
+    var LastReadBooks = [
+        book(title: "A Game of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"),
+        book(title: "The Lord of the Rings", cover: "lotr", lastBackground: "LOTR_Background"),
+        book(title: "Harry Potter 3", cover: "HPIII", lastBackground: "HPIII_Background")
+    ]
+    
     var Mice1 = [
         mouse(mouseName: "Pirate Mouse", mouseImage: "Pirate Mouse"),
         mouse(mouseName: "King Mouse", mouseImage: "KingMouse"),
