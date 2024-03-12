@@ -1,15 +1,15 @@
 # LibrarAI: Immersive Audiobook Experience
 
-Welcome to **LibrarAI**, an innovative iOS application that transforms your reading experience into an immersive journey. Written in Swift, this app is designed to be your personal audible book companion, complete with AI-generated images and text-to-speech functionality to bring stories to life. As you dive into your favorite books, **Library Mouse** enhances each session with vivid imagery and expressive narration, crafted by advanced AI algorithms.
+Welcome to **LibrarAI**, an innovative iOS application that transforms your reading experience into an immersive journey. Written in Swift, this app is designed to be your personal audible book companion, complete with AI-generated images and text-to-speech functionality to bring stories to life. As you dive into your favorite books, **LibrarAI** enhances each session with vivid imagery and expressive narration, crafted by advanced AI algorithms.
 
 ## Features
 - **AI-Powered Text-to-Speech**: Enjoy a natural and engaging reading experience with our state-of-the-art voice generation.
-- **Dynamic Image Generation**: Visualize the story with images that evolve as you progress through the book.
+- **Dynamic Image Generation**: Visualize the story with background images that evolve as you progress through the book.
 - **Collectibles Rewards**: Earn adorable mouse-themed collectibles as you complete reading challenges and milestones.
 - **Library-Themed Collectibles**: Each collectible is uniquely designed to reflect the theme of the book you've read or the specific challenge you've conquered.
 
 ## Motivation
-The concept of **Library Mouse** stems from the Italian term "topo da biblioteca," meaning a person who loves to spend time reading books. True to its name, the app rewards its users with collectible mice, symbolizing the joy of reading and learning. The app's logo, a charming little mouse, embodies the spirit of a bibliophile.
+The concept of **LibrarAI** stems from the Italian term "topo da biblioteca," meaning a person who loves to spend time reading books. True to its name, the app rewards its users with collectible mice, symbolizing the joy of reading and learning. The app's logo, a charming little mouse, embodies the spirit of a bibliophile.
 
 ## Getting Started
 To get started with **LibrarAI**, clone the repository and follow the setup instructions below.
