@@ -14,14 +14,16 @@ struct BookView: View {
     var body: some View {
         VStack{
             ZStack {
-                Image("bookBase")
-                    .resizable()
-                    .frame(width: 115, height: 182)
-                    .clipShape(RoundedRectangle(cornerRadius: 3))
+               
                 Image(book.cover)
                     .resizable()
                     .frame(width: 115, height: 182)
                     .clipShape(RoundedRectangle(cornerRadius: 3))
+                Image("bookBase")
+                    .resizable()
+                    .frame(width: 220, height: 260)
+                    .clipShape(RoundedRectangle(cornerRadius: 3))
+                    .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
             }
             Text (book.title)
                 .font(.footnote)
@@ -31,5 +33,5 @@ struct BookView: View {
 }
 
 #Preview {
-    BookView(book: book(title: "A Game of Thrones", cover: "GoT-I&F"))
+    BookView(book: book(title: "The Little Prince", cover: "Little Prince"))
 }

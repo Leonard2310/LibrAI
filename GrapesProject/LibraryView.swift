@@ -57,7 +57,7 @@ struct LibraryView: View {
                 .padding(.leading)
             TabView{
 
-                ForEach(Mydata.Books) {
+                ForEach(Mydata.LastReadBooks) {
                     Book in
                     BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
                 }
