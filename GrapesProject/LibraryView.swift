@@ -59,7 +59,7 @@ struct LibraryView: View {
 
                 ForEach(Mydata.Books) {
                     Book in
-                    BookCardView(book: book(title: Book.title,cover: Book.cover,lastBackground: Book.lastBackground))
+                    BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
                 }
                 .padding(.bottom, 80.0)
             }
@@ -77,11 +77,25 @@ struct LibraryView: View {
                 ) { result in
                     do {
                         let fileURL = try result.get().first!
-                        // Qui puoi gestire il file importato
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
+
+                        // Aggiungi il file alla cartella "Books" nella directory dell'app
+                        let fileManager = FileManager.default
+                        let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+                        let booksDirectory = documentsDirectory.appendingPathComponent("Books")
+                        let destinationURL = booksDirectory.appendingPathComponent(fileURL.lastPathComponent)
+
+                        // Crea la cartella "Books" se non esiste
+                        if !fileManager.fileExists(atPath: booksDirectory.path) {
+                            try fileManager.createDirectory(at: booksDirectory, withIntermediateDirectories: true, attributes: nil)
+                        }
+
+                        // Copia il file nella cartella "Books"
+                        if !fileManager.fileExists(atPath: destinationURL.path) {
+                            try fileManager.copyItem(at: fileURL, to: destinationURL)
+                        }
                     } catch {
-                        // Gestisci l'errore
                         print("Errore nell'importazione del file: \(error)")
                     }
                 }
