@@ -21,21 +21,24 @@ struct AllBooksView: View {
             //Text("All books")
                 //.font(.title3)
             ScrollView(showsIndicators: false){
-                ForEach(FilteredBooks) {
-                    Book in
-                    VStack{
-                        NavigationLink(destination: ImmersiveReadingView()) {
-                            Image (Book.cover)
-                                .resizable()
-                            //.aspectRatio(contentMode: .fit)
-                                .frame(width: 115, height: 182)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                
+                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Container@*/VStack/*@END_MENU_TOKEN@*/ {
+                    ForEach(FilteredBooks) {
+                        Book in
+                        VStack{
+                            NavigationLink(destination: ImmersiveReadingView()) {
+                                Image (Book.cover)
+                                    .resizable()
+                                //.aspectRatio(contentMode: .fit)
+                                    .frame(width: 115, height: 182)
+                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                            }
+                            Text (Book.title)
+                                .font(.footnote)
+                            
                         }
-                        Text (Book.title)
-                            .font(.footnote)
                         
                     }
-                    
                 }
             }
             .navigationTitle("All Books")

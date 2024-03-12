@@ -71,18 +71,19 @@ import SwiftUI
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
                 .navigationTitle("Library")
+                .toolbar(content: {
+                    Button("Add", systemImage: "plus"){
+                        sheetvision.toggle()
+                    }
+                    .sheet(isPresented: $sheetvision){
+                        AddBookView()
+                    }
+                }
+                )
             }
             .navigationTitle("Library")
             .searchable(text: $searchText, prompt: "Search a book")
-            .toolbar(content: {
-                Button("Add", systemImage: "plus"){
-                    sheetvision.toggle()
-                }
-                .sheet(isPresented: $sheetvision){
-                    AddBookView()
-                }
-            }
-            )
+           
         }
     
 }
