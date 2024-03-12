@@ -50,7 +50,8 @@ struct NewMouseView: View {
                     ZStack {
                         Circle()
                             .fill(RadialGradient(gradient: Gradient(colors: [Color.orange, Color.purple]), center: .center, startRadius: 10, endRadius: 300))
-                            .frame(width: 215, height: 215)
+                                .frame(width: 215, height: 215)
+                                .scaleEffect(youWin ? 0.5 : 1.0)
                         NavigationLink (destination: CollectablesView()) {
                             Image(mouse.mouseImage)
                                 .resizable()
@@ -58,7 +59,7 @@ struct NewMouseView: View {
                                 .mask(Circle())
                                 .frame(width: 200, height: 200)
                                 .foregroundStyle(.orange.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                .scaleEffect(youWin ? 1.5 : 1.0)
+                                .scaleEffect(youWin ? 0.5 : 1.0)
                                 .rotationEffect(.degrees(youWin ? 360 : 0))
                                 .opacity(youWin ? 0.0 : 1.0)
                         }
