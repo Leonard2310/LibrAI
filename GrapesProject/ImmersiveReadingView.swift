@@ -96,14 +96,10 @@ struct ImmersiveReadingView: View {
                 }
                 
             }
-          /*  .toolbar(){
-                Button("Cancel")
-                    .foregroundColor(Color.black){
+            /*Label("", systemimage: "xmark"){
                     dismiss()
-                }
-            }*/
-
-        }
+                }*/
+            }
     }
 }
 
