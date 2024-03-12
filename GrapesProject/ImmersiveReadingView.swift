@@ -52,28 +52,32 @@ struct ImmersiveReadingView: View {
                         .foregroundColor(.white)
                         .padding(.trailing, 30.0)
                         
-                        Button("", systemImage: "backward.fill")  {
-                            
-                        }
-                        .frame(width: 25.0, height: 25.0)
-                        .foregroundColor(.white)
                         
-                        Button("", systemImage: "play.fill")  {
-                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                        }
-                        .frame(width: 40.0, height: 40.0)
-                        .foregroundColor(.white)
-                        
-                        Button("", systemImage: "forward.fill")  {
+                        HStack {
                             
+                            Button("", systemImage: "backward.fill")  {
+                                
+                            }
+                            .frame(width: 25.0, height: 25.0)
+                            .foregroundColor(.white)
+                            
+                            Button("", systemImage: "play.fill")  {
+                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                            }
+                            .frame(width: 40.0, height: 40.0)
+                            .foregroundColor(.white)
+                            
+                            Button("", systemImage: "forward.fill")  {
+                                
+                            }
+                            .frame(width: 25.0, height: 25.0)
+                            .foregroundColor(.white)
                         }
-                        .frame(width: 25.0, height: 25.0)
-                        .foregroundColor(.white)
                         
                         Button("", systemImage: "airplayaudio")  {
                             /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                         }
-                        .padding(.leading, 50.0)
+                        .padding(.leading, 30.0)
                         .frame(width: 25.0, height: 25.0)
                         .foregroundColor(.white)
                     }
