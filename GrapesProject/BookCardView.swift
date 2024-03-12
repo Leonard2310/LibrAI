@@ -9,14 +9,16 @@ struct BookCardView: View {
             //Image(Background della view)
             Image (book.lastBackground)
                 .resizable()
+                .blur(radius: 0.8)
                 //.padding(.top, 5.0)
-                .aspectRatio(contentMode: .fill)                
+                .aspectRatio(contentMode: .fill)       
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-            
+
+                
                 //.padding(.leading, 31.0)
             Rectangle()
-                .fill(LinearGradient(colors: [Color.clear, Color.black.opacity(0.8)], startPoint: .leading, endPoint: .trailing))
+                .fill(LinearGradient(colors: [Color.clear, Color.black.opacity(1.0)], startPoint: .leading, endPoint: .trailing))
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
@@ -30,13 +32,20 @@ struct BookCardView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 VStack (alignment: .leading){
-                    Text(book.title)
-                        .font(.title3)
-                        .fontWeight(.bold)
+                    VStack (alignment: .leading){
+                        Text(book.title)
+                            .font(.title3)
+                            .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         
-                    Text(book.author)
-                        .foregroundColor(Color.white)
+                        Text(book.author)
+                            .foregroundColor(Color.white)
+                    }
+                    
+                    ProgressView(value: 0.5)
+                        .frame(width: 200.0)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                    
                     
                 }
             }

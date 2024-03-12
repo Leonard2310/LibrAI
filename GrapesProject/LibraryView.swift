@@ -38,11 +38,17 @@ struct LibraryView: View {
                             Book in
                             VStack{
                                 NavigationLink(destination: ImmersiveReadingView()) {
-                                    Image (Book.cover)
-                                        .resizable()
-                                    //.aspectRatio(contentMode: .fit)
-                                        .frame(width: 115, height: 182)
-                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    ZStack {
+                                        Image(Book.cover)
+                                            .resizable()
+                                            .frame(width: 115, height: 182)
+                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        Image("bookBase")
+                                            .resizable()
+                                            .frame(width: 115, height: 182)
+                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                            .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                                    }
                                 }
                                 Text (Book.title)
                                     .font(.footnote)
@@ -63,7 +69,7 @@ struct LibraryView: View {
                 .padding(.leading)
             TabView{
 
-                ForEach(Mydata.Books) {
+                ForEach(Mydata.LastReadBooks) {
                     Book in
                     BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
                 }

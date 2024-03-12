@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
-    @State var RectReadingHeigh = 263.0
-    @State var RectReadingWidth = 337.0
+    @GestureState var RectReadingHeigh = 263.0
+    @GestureState var RectReadingWidth = 337.0
     
     var body: some View {
         ZStack{
@@ -25,6 +25,11 @@ struct ImmersiveReadingView: View {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
                         .frame(width: RectReadingWidth, height: RectReadingHeigh)
+                        .gesture(DragGesture()
+                            .updating(<#T##state: GestureState<State>##GestureState<State>#>, body: <#T##(DragGesture.Value, inout State, inout Transaction) -> Void#>
+                                      $RectReadingHeigh,
+                                      $RectReadingWidth
+                                     ))
                     
                     Text("The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.")
                         .foregroundColor(.white)
@@ -84,11 +89,10 @@ struct ImmersiveReadingView: View {
                         .foregroundColor(.white)
                     }
                     .padding(.bottom)
-                    ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .padding(.top, 40)
-                        .frame(width: 270.0)
-                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                    .padding(.leading)
+                    .padding(.top, 40)
+                    .frame(width: 270.0)
+                    .progressViewStyle(LinearProgressViewStyle(tint: .white))
                 }
                 .padding(.top)
                 

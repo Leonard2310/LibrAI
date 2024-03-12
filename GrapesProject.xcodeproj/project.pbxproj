@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0953AD372B9F3B4B0098CE8A /* BookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD362B9F3B4B0098CE8A /* BookCardView.swift */; };
 		0953AD3B2B9F529F0098CE8A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */; };
+		0953AD412BA0A1130098CE8A /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0953AD402BA0A1130098CE8A /* BookView.swift */; };
 		4D4B30132B9A11F600B89C5A /* EPUBKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4B30122B9A11F600B89C5A /* EPUBKit */; };
 		4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4B30142B9A1A7C00B89C5A /* TryView.swift */; };
 		4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0953AD362B9F3B4B0098CE8A /* BookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardView.swift; sourceTree = "<group>"; };
 		0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0953AD402BA0A1130098CE8A /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		4D4B30142B9A1A7C00B89C5A /* TryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryView.swift; sourceTree = "<group>"; };
 		4DBD4ACE2B98CDDF00E7EF91 /* GrapesProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrapesProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrapesProjectApp.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
 				0953AD362B9F3B4B0098CE8A /* BookCardView.swift */,
 				86E062F92B9C9628001EDC0C /* AllBooksView.swift */,
+				0953AD402BA0A1130098CE8A /* BookView.swift */,
 				861ED4C92B9BBD590069F85A /* AddBookView.swift */,
 				4DBD4AE12B98CE3800E7EF91 /* CollectablesView.swift */,
 				0953AD3A2B9F529F0098CE8A /* BackgroundView.swift */,
@@ -231,6 +234,7 @@
 				4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */,
 				861ED4CA2B9BBD590069F85A /* AddBookView.swift in Sources */,
 				CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */,
+				0953AD412BA0A1130098CE8A /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
