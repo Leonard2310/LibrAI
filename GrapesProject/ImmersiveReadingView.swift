@@ -96,10 +96,10 @@ struct ImmersiveReadingView: View {
                     }
                     .padding(.bottom)
                     ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
-                        .padding(.top, 40)
-                        .frame(width: 270.0)
-                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                    .padding(.leading)
+                    .padding(.top, 40)
+                    .frame(width: 270.0)
+                    .progressViewStyle(LinearProgressViewStyle(tint: .white))
                 }
                 .padding(.top)
                 
