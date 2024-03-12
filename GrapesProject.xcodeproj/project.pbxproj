@@ -26,8 +26,8 @@
 		CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */; };
 		CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */; };
 		CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0466D2B9E5FEC006EF99E /* SwiftSoup */; };
-		CEFE3B5F2BA08FAF0083D433 /* TextExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B5E2BA08FAF0083D433 /* TextExtraction.swift */; };
 		CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B602BA09DF80083D433 /* Mouse.swift */; };
+		CEFE3B632BA09EDF0083D433 /* FuncUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,8 +49,8 @@
 		CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "shelley-frankenstein.epub"; path = "GrapesProject/Books/shelley-frankenstein.epub"; sourceTree = SOURCE_ROOT; };
 		CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; path = GrapesProject/Books/A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; sourceTree = SOURCE_ROOT; };
 		CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveReadingView.swift; sourceTree = "<group>"; };
-		CEFE3B5E2BA08FAF0083D433 /* TextExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtraction.swift; sourceTree = "<group>"; };
 		CEFE3B602BA09DF80083D433 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 				CEFE3B602BA09DF80083D433 /* Mouse.swift */,
 				CE67F4BC2B9A19C200E74112 /* Data.swift */,
 				CE67F4BE2B9A19CE00E74112 /* Book.swift */,
-				CEFE3B5E2BA08FAF0083D433 /* TextExtraction.swift */,
+				CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				CEAFC0FD2B9B3FFE003A8D55 /* Books */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
@@ -209,7 +209,7 @@
 				CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */,
 				CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */,
 				CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */,
-				CEFE3B5F2BA08FAF0083D433 /* TextExtraction.swift in Sources */,
+				CEFE3B632BA09EDF0083D433 /* FuncUtilities.swift in Sources */,
 				4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */,
 				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,
 				4DBD4AE22B98CE3800E7EF91 /* CollectablesView.swift in Sources */,

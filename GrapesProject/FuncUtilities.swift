@@ -1,3 +1,10 @@
+//
+//  FuncUtilities.swift
+//  GrapesProject
+//
+//  Created by Leonardo Catello on 12/03/24.
+//
+
 import Foundation
 import EPUBKit
 import SwiftSoup
@@ -90,3 +97,4 @@ func extractContent(document: EPUBDocument?) -> [String] {
             }
         }
 }
+
