@@ -33,7 +33,7 @@ struct AITryView: View {
                 }
             }
 
-            if let audioURL = audioURL {
+            if audioURL != nil {
                 Button("Play Audio") {
                     audioPlayer?.play()
                 }

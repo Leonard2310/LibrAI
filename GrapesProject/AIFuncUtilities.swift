@@ -9,7 +9,7 @@ import Foundation
 import OpenAI
 import SwiftOpenAI
 
-public let openAI = SwiftOpenAI(apiKey: "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")
+public let openAI = SwiftOpenAI(apiKey: "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")
 
 func ImageGeneration(textPrompt: String, completion: @escaping (String?) -> Void) async {
     do {
@@ -18,7 +18,7 @@ func ImageGeneration(textPrompt: String, completion: @escaping (String?) -> Void
             model: .dalle(.dalle3), // Specify the DALL-E 3 model.
             prompt: textPrompt, // Use the provided prompt to guide image generation.
             numberOfImages: 1, // Request a single image.
-            size: .s1024 // Specify the size of the generated image.
+            size: .s256 // Specify the size of the generated image.
         )
         
         // Print the resulting image.
