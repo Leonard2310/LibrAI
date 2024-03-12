@@ -15,9 +15,9 @@ struct Config {
     static var openAIKey: String {
         get {
             // Attempt to find the path of 'Config.plist' in the main bundle.
-            guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
+            guard let filePath = Bundle.main.path(forResource: "Info", ofType: "plist") else {
                 // If the file is not found, crash with an error message.
-                fatalError("Couldn't find file 'Config.plist'.")
+                fatalError("Couldn't find file 'Info.plist'.")
             }
             
             // Load the contents of the plist file into an NSDictionary.
@@ -46,7 +46,7 @@ func ImageGeneration(textPrompt: String, completion: @escaping (String?) -> Void
             model: .dalle(.dalle3), // Specify the DALL-E 3 model.
             prompt: textPrompt, // Use the provided prompt to guide image generation.
             numberOfImages: 1, // Request a single image.
-            size: .s256 // Specify the size of the generated image.
+            size: .s1024 // Specify the size of the generated image.
         )
         
         // Print the resulting image.
