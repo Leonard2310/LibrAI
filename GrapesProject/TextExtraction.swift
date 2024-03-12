@@ -21,7 +21,7 @@ func loadEPUBDocument(from path: URL?) -> EPUBDocument? {
 }
 
 func extractCover(document: EPUBDocument?) -> URL? {
-    return document?.cover
+    return document!.cover!
 }
 
 func extractTitle(document: EPUBDocument!) -> String {
@@ -33,7 +33,11 @@ func extractTitle(document: EPUBDocument!) -> String {
 }
 
 func extractAuthor(document: EPUBDocument?) -> String {
-    return document!.author!
+    if document?.author != nil {
+        return document!.author!
+    }else{
+        return "Autore non disponibile"
+    }
 }
 
 func extractContent(document: EPUBDocument?) -> [String] {
