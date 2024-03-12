@@ -10,7 +10,6 @@ import SwiftUI
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
     @State private var RectReadingHeigh: CGFloat = 263.0
-    @State private var RectReadingWidth: CGFloat = 337.0
     @GestureState private var dragOffset = CGSize.zero
     
     var body: some View {
@@ -28,13 +27,14 @@ struct ImmersiveReadingView: View {
                         .frame(width: 337.0
                                , height: RectReadingHeigh)
                         
+                        
                          
-                    
                         Text("The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.")
                             .foregroundColor(.white)
                             .padding()
                             .lineLimit(nil)
                             .frame(width: 337.0, height: 263.0)
+                            
                     
                     Rectangle()
                         .fill(Color.white) // Customize the color as needed
@@ -46,9 +46,9 @@ struct ImmersiveReadingView: View {
                     .updating($dragOffset, body: { (value, state, transaction) in
                         state = value.translation
                     })
-                    .onEnded({ value in
+                    .onEnded{ value in
                         RectReadingHeigh += value.translation.height
-                    }))
+                    })
                 
                 
                 ZStack{
