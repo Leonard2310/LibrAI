@@ -66,7 +66,7 @@ func AudioGeneration(textInput: String, completion: @escaping (String?) -> Void)
         let data = try await openAI.createSpeech(
             model: .tts(.tts1), // Specify the text-to-speech model, here tts1.
             input: input, // Provide the input text.
-            voice: .alloy, // Choose the voice type, here 'alloy'.
+            voice: .onyx, // Choose the voice type, here 'alloy'.
             responseFormat: .mp3, // Set the audio response format as MP3.
             speed: 1.0 // Set the speed of the speech. 1.0 is normal speed.
         )
@@ -85,7 +85,7 @@ func AudioGeneration(textInput: String, completion: @escaping (String?) -> Void)
         }
     } catch {
         // Handle any errors encountered during the audio creation process.
-        print(error.localizedDescription)
+        print(error)
     }
 }
 
