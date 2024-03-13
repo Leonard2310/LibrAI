@@ -12,6 +12,8 @@ struct ImmersiveReadingView: View {
     @State private var RectReadingHeigh: CGFloat = 263.0
     //@GestureState private var dragOffset = CGSize.zero
     @State private var isDragging = false
+    @Environment(\.dismiss) var dismiss
+
     
     var body: some View {
         ZStack{
@@ -80,7 +82,7 @@ struct ImmersiveReadingView: View {
                         }
                         .frame(width: 25.0, height: 25.0)
                         .foregroundColor(.white)
-                        .padding(.trailing, 30.0)
+                        .padding(.trailing, 15.0)
                         
                         
                         HStack {
@@ -112,16 +114,22 @@ struct ImmersiveReadingView: View {
                         .foregroundColor(.white)
                     }
                     .padding(.bottom)
+                    .padding(.leading, -10)
                     ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
+                        //.padding(.leading)
                         .padding(.top, 40)
                         .frame(width: 270.0)
                         .progressViewStyle(LinearProgressViewStyle(tint: .white))
                 }
                 .padding(.top)
-                
-                
             }
+            Button("", systemImage: "xmark"){
+                dismiss()
+            }
+            .foregroundColor(.white)
+            .padding(.bottom, 700)
+            .padding(.leading, 350)
+            .frame(width: 500, height: 300)
         }
     }
 }
