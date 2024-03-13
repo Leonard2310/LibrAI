@@ -9,34 +9,60 @@ struct BookCardView: View {
             //Image(Background della view)
             Image (book.lastBackground)
                 .resizable()
+                .blur(radius: 0.8)
                 //.padding(.top, 5.0)
-                .aspectRatio(contentMode: .fill)                
+                .aspectRatio(contentMode: .fill)       
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
-            
+
+                
                 //.padding(.leading, 31.0)
             Rectangle()
-                .fill(LinearGradient(colors: [Color.clear, Color.black.opacity(0.8)], startPoint: .leading, endPoint: .trailing))
+                .fill(LinearGradient(colors: [Color.clear, Color.black.opacity(1.0)], startPoint: .leading, endPoint: .trailing))
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 //.padding(.leading, 31.0)
                 
     
             HStack{
-                Image(book.cover)
-                    .resizable()
-                    .frame(width: 90, height: 140)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                VStack{
-                    Text("Da decidere")
+                NavigationLink(destination: ImmersiveReadingView()) {
+                    ZStack {
+                        Image(book.cover)
+                            .resizable()
+                            .frame(width: 90, height: 140)
+                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                        Image("bookBase")
+                            .resizable()
+                            .frame(width: 90, height: 140)
+                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                            .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                        
+                        Image(systemName: "play.circle")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 50, height: 50)
+                            .shadow(radius: 2)
+                        
+                    
+                            
+                    }
+                    
+                }
+                VStack (alignment: .leading){
+                    VStack (alignment: .leading){
+                        Text(book.title)
+                            .font(.title3)
+                            .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
-                    Text("Da decidere")
-                        .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
-                    Text("Da decidere")
-                        .foregroundColor(Color.white)
-                        .padding(.leading, 30.0)
+                        
+                        Text(book.author)
+                            .foregroundColor(Color.white)
+                    }
+                    
+                    ProgressView(value: 0.5)
+                        .frame(width: 200.0)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                    
                     
                 }
             }
@@ -46,5 +72,5 @@ struct BookCardView: View {
 }
 
 #Preview {
-    BookCardView(book: book(title: "A Game Of Thrones", cover: "GoT-I&F", lastBackground: "GoT_Background"))
+    BookCardView(book: book(title: "A Game Of Thrones", cover: "GoT-I&F",author: "George R. R. Martin", lastBackground: "GoT_Background"))
 }
