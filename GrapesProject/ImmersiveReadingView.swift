@@ -10,7 +10,8 @@ import SwiftUI
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
     @State private var RectReadingHeigh: CGFloat = 263.0
-    @GestureState private var dragOffset = CGSize.zero
+    //@GestureState private var dragOffset = CGSize.zero
+    @State private var isDragging = false
     
     var body: some View {
         ZStack{
@@ -47,13 +48,24 @@ struct ImmersiveReadingView: View {
                         .cornerRadius(3) // Rounded corners
                         .offset(y: -120) // Position the grabber
                 }
-                .gesture(DragGesture()
-                    .updating($dragOffset, body: { (value, state, transaction) in
-                        state = value.translation
-                    })
-                        .onEnded{ value in
-                            RectReadingHeigh += value.translation.height
-                        })
+                .gesture(
+                    DragGesture()
+                        .onChanged { value in
+                            withAnimation {
+                                if value.translation.height < -50 {
+                                    // Dragging up
+                                    RectReadingHeigh = 619
+                                    isDragging = true
+                                } else if value.translation.height > 50 {
+                                    // Dragging down
+                                    RectReadingHeigh = 0
+                                    isDragging = true
+                                } else {
+                                    isDragging = false
+                                }
+                            }
+                        }
+                )
                 
                 
                 ZStack{
