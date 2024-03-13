@@ -26,9 +26,9 @@ struct ConfettiParticle: View {
             .scaleEffect(scale)
             .onAppear {
                 withAnimation(Animation
-                    .easeInOut(duration: Double.random(in: 1...3))
-                    .repeatForever(autoreverses: true)
-                    .delay(Double.random(in: 0...2))
+                                .easeInOut(duration: Double.random(in: 1...3))
+                                .repeatForever(autoreverses: true)
+                                .delay(Double.random(in: 0...2))
                 ) {
                     self.opacity = Double.random(in: 0.5...1)
                     self.rotation = Double.random(in: 0...360)
@@ -92,9 +92,9 @@ struct NewMouseView: View {
                         ConfettiView()
                         Circle()
                             .fill(RadialGradient(gradient: Gradient(colors: [Color.orange, Color.white]), center: .center, startRadius: 5, endRadius: 600))
-                            .frame(width: 305, height: 305)
-                            .scaleEffect(youWin ? 0.5 : 1.0)
-                            .padding(.top, 70.0)
+                                .frame(width: 305, height: 305)
+                                .scaleEffect(youWin ? 0.5 : 1.0)
+                                .padding(.top, 70.0)
                         NavigationLink (destination: CollectablesView()) {
                             Image(mouse.mouseImage)
                                 .resizable()

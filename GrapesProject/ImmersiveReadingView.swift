@@ -22,7 +22,7 @@ struct ImmersiveReadingView: View {
             VStack{
                 Spacer()
                 
-                ZStack{
+                ZStack (alignment: .top){
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
                         .frame(width: 337.0
@@ -46,27 +46,30 @@ struct ImmersiveReadingView: View {
                         .fill(Color.white) // Customize the color as needed
                         .frame(width: 40, height: 6) // Adjust the size
                         .cornerRadius(3) // Rounded corners
-                        .offset(y: -120) // Position the grabber
-                }
-                .gesture(
-                    DragGesture()
-                        .onChanged { value in
-                            withAnimation {
-                                if value.translation.height < -50 {
-                                    // Dragging up
-                                    RectReadingHeigh = 619
-                                    isDragging = true
-                                } else if value.translation.height > 50 {
-                                    // Dragging down
-                                    RectReadingHeigh = 0
-                                    isDragging = true
-                                } else {
-                                    isDragging = false
+                        .offset(y: 10) // Position the grabber
+                        .gesture(
+                            DragGesture(minimumDistance: 10, coordinateSpace: .local)
+                                .onChanged { value in
+                                    withAnimation (.interpolatingSpring(stiffness: 50, damping: 2000)) {
+                                        if RectReadingHeigh == 263 && value.translation.height < -50 {
+                                            RectReadingHeigh = 619
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 263 && value.translation.height > 50 {
+                                            RectReadingHeigh = 0
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 619 && value.translation.height > 50 {
+                                            RectReadingHeigh = 263
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 0 && value.translation.height < -50 {
+                                            RectReadingHeigh = 263
+                                            isDragging = true
+                                        } else {
+                                        isDragging = false
+                                    }
                                 }
                             }
-                        }
-                )
-                
+                        )
+                }
                 
                 ZStack{
                     
