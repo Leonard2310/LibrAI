@@ -10,7 +10,10 @@ import SwiftUI
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
     @State private var RectReadingHeigh: CGFloat = 263.0
-    @GestureState private var dragOffset = CGSize.zero
+    //@GestureState private var dragOffset = CGSize.zero
+    @State private var isDragging = false
+    @Environment(\.dismiss) var dismiss
+
     
     var body: some View {
         ZStack{
@@ -21,7 +24,7 @@ struct ImmersiveReadingView: View {
             VStack{
                 Spacer()
                 
-                ZStack{
+                ZStack (alignment: .top){
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
                         .frame(width: 337.0
@@ -45,16 +48,30 @@ struct ImmersiveReadingView: View {
                         .fill(Color.white) // Customize the color as needed
                         .frame(width: 40, height: 6) // Adjust the size
                         .cornerRadius(3) // Rounded corners
-                        .offset(y: -120) // Position the grabber
+                        .offset(y: 10) // Position the grabber
+                        .gesture(
+                            DragGesture(minimumDistance: 10, coordinateSpace: .local)
+                                .onChanged { value in
+                                    withAnimation (.interpolatingSpring(stiffness: 50, damping: 2000)) {
+                                        if RectReadingHeigh == 263 && value.translation.height < -50 {
+                                            RectReadingHeigh = 619
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 263 && value.translation.height > 50 {
+                                            RectReadingHeigh = 0
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 619 && value.translation.height > 50 {
+                                            RectReadingHeigh = 263
+                                            isDragging = true
+                                        } else if RectReadingHeigh == 0 && value.translation.height < -50 {
+                                            RectReadingHeigh = 263
+                                            isDragging = true
+                                        } else {
+                                        isDragging = false
+                                    }
+                                }
+                            }
+                        )
                 }
-                .gesture(DragGesture()
-                    .updating($dragOffset, body: { (value, state, transaction) in
-                        state = value.translation
-                    })
-                        .onEnded{ value in
-                            RectReadingHeigh += value.translation.height
-                        })
-                
                 
                 ZStack{
                     
@@ -68,7 +85,7 @@ struct ImmersiveReadingView: View {
                         }
                         .frame(width: 25.0, height: 25.0)
                         .foregroundColor(.white)
-                        .padding(.trailing, 30.0)
+                        .padding(.trailing, 15.0)
                         
                         
                         HStack {
@@ -100,16 +117,22 @@ struct ImmersiveReadingView: View {
                         .foregroundColor(.white)
                     }
                     .padding(.bottom)
+                    .padding(.leading, -10)
                     ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        .padding(.leading)
+                        //.padding(.leading)
                         .padding(.top, 40)
                         .frame(width: 270.0)
                         .progressViewStyle(LinearProgressViewStyle(tint: .white))
                 }
                 .padding(.top)
-                
-                
             }
+            Button("", systemImage: "xmark"){
+                dismiss()
+            }
+            .foregroundColor(.white)
+            .padding(.bottom, 700)
+            .padding(.leading, 350)
+            .frame(width: 500, height: 300)
         }
     }
 }

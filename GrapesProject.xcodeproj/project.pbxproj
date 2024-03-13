@@ -33,6 +33,7 @@
 		CEFE3B682BA0A6B00083D433 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CEFE3B672BA0A6B00083D433 /* OpenAI */; };
 		CEFE3B6B2BA0B06C0083D433 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CEFE3B6A2BA0B06C0083D433 /* SwiftOpenAI */; };
 		CEFE3B6F2BA0B3770083D433 /* AITryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B6E2BA0B3770083D433 /* AITryView.swift */; };
+		FBE808D22BA2162700FC77AC /* mousedescription1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D12BA2162700FC77AC /* mousedescription1View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIFuncUtilities.swift; sourceTree = "<group>"; };
 		CEFE3B6E2BA0B3770083D433 /* AITryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITryView.swift; sourceTree = "<group>"; };
 		CEFE3B702BA0BC6D0083D433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FBE808D12BA2162700FC77AC /* mousedescription1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription1View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
+				FBE808D12BA2162700FC77AC /* mousedescription1View.swift */,
 				4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */,
 				CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */,
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
@@ -231,6 +234,7 @@
 				CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */,
 				CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */,
 				CEFE3B6F2BA0B3770083D433 /* AITryView.swift in Sources */,
+				FBE808D22BA2162700FC77AC /* mousedescription1View.swift in Sources */,
 				CEFE3B632BA09EDF0083D433 /* FuncUtilities.swift in Sources */,
 				4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */,
 				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,

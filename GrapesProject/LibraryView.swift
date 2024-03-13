@@ -40,7 +40,6 @@ struct LibraryView: View {
                                 Button(action: {
                                     self.sheetvision2.toggle()
                                 }) {
-                                    //NavigationLink(ImmersiveReadingView()){
                                         ZStack {
                                             Image(Book.cover)
                                                 .resizable()
@@ -53,12 +52,11 @@ struct LibraryView: View {
                                                 .clipShape(RoundedRectangle(cornerRadius: 3))
                                                 .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
                                         }
-                                        .sheet(isPresented: $sheetvision2) {
+                                        .fullScreenCover(isPresented: $sheetvision2) {
                                             ImmersiveReadingView()
-                                                .ignoresSafeArea(.all)
+                                                
                                         }
                                     }
-                               // }
                                 Text (Book.title)
                                     .font(.footnote)
 
@@ -80,7 +78,7 @@ struct LibraryView: View {
 
                 ForEach(Mydata.LastReadBooks) {
                     Book in
-                    BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
+                    BookCardView(book: book(title: Book.title, cover: Book.cover, author: Book.author, lastBackground: Book.lastBackground))
                 }
                 .padding(.bottom, 80.0)
             }
