@@ -44,24 +44,26 @@ struct NewMouseView: View {
                                 .stroke(Color.orange, lineWidth: 2)
                         )
                 }
-                .padding()
+                .padding(.top, 60.0)
                 
                 if let mouse = mouse {
                     ZStack {
                         Circle()
-                            .fill(RadialGradient(gradient: Gradient(colors: [Color.orange, Color.purple]), center: .center, startRadius: 10, endRadius: 300))
-                                .frame(width: 215, height: 215)
+                            .fill(RadialGradient(gradient: Gradient(colors: [Color.orange, Color.white]), center: .center, startRadius: 5, endRadius: 600))
+                                .frame(width: 305, height: 305)
                                 .scaleEffect(youWin ? 0.5 : 1.0)
+                                .padding(.top, 70.0)
                         NavigationLink (destination: CollectablesView()) {
                             Image(mouse.mouseImage)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .mask(Circle())
-                                .frame(width: 200, height: 200)
+                                .frame(width: 285, height: 285)
                                 .foregroundStyle(.orange.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
                                 .scaleEffect(youWin ? 0.5 : 1.0)
                                 .rotationEffect(.degrees(youWin ? 360 : 0))
                                 .opacity(youWin ? 0.0 : 1.0)
+                                .padding(.top, 70.0)
                         }
                     }
                     HStack {
@@ -79,12 +81,11 @@ struct NewMouseView: View {
                             .opacity(youWin ? 0.0 : 1.0)
                     }
                     Text("\(mouse.mouseName) ")
-                        .font(.headline)
+                        .font(.title3)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("AccentColor"))
                         .scaleEffect(youWin ? 1.5 : 1.0)
                         .opacity(youWin ? 0.0 : 1.0)
-                    
                     
                 }
                 else {
