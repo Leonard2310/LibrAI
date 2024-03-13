@@ -26,15 +26,20 @@ struct ImmersiveReadingView: View {
                         .fill(Color.readingRectangle)
                         .frame(width: 337.0
                                , height: RectReadingHeigh)
-                        
-                        
-                         
-                        Text("The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.")
-                            .foregroundColor(.white)
-                            .padding()
-                            .lineLimit(nil)
-                            .frame(width: 337.0, height: 263.0)
+                        .overlay(
                             
+                            ScrollViewReader(content: { proxy in
+                                Text("The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .lineLimit(nil)
+                            })
+                            
+                            
+                            
+                        )
+                    
+                    
                     
                     Rectangle()
                         .fill(Color.white) // Customize the color as needed
@@ -46,9 +51,9 @@ struct ImmersiveReadingView: View {
                     .updating($dragOffset, body: { (value, state, transaction) in
                         state = value.translation
                     })
-                    .onEnded{ value in
-                        RectReadingHeigh += value.translation.height
-                    })
+                        .onEnded{ value in
+                            RectReadingHeigh += value.translation.height
+                        })
                 
                 
                 ZStack{
@@ -96,10 +101,10 @@ struct ImmersiveReadingView: View {
                     }
                     .padding(.bottom)
                     ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                    .padding(.leading)
-                    .padding(.top, 40)
-                    .frame(width: 270.0)
-                    .progressViewStyle(LinearProgressViewStyle(tint: .white))
+                        .padding(.leading)
+                        .padding(.top, 40)
+                        .frame(width: 270.0)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .white))
                 }
                 .padding(.top)
                 
