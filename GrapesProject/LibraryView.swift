@@ -41,6 +41,7 @@ struct LibraryView: View {
                                     ZStack {
                                         Image(Book.cover)
                                             .resizable()
+                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                             .frame(width: 115, height: 182)
                                             .clipShape(RoundedRectangle(cornerRadius: 3))
                                         Image("bookBase")
