@@ -29,7 +29,7 @@ struct ContentView: View {
                         .repeatForever(autoreverses: true)
                         .delay(Double.random(in: 0...2))
                     ) {
-                        self.opacity = Double.random(in: 0.5...1)
+                        self.opacity = Double.random(in: 0.75...1.5)
                         self.rotation = Double.random(in: 0...360)
                         self.scale = CGFloat.random(in: 0.5...1.5)
                     }
@@ -38,7 +38,7 @@ struct ContentView: View {
                         self.isLoaded = true
                     }
                 }
-                .fullScreenCover(isPresented: $isLoaded, content: LibraryView.init)
+                .fullScreenCover(isPresented: $isLoaded, content: TabBar.init)
         }
     }
 }

@@ -35,9 +35,6 @@ struct CollectablesView: View {
                             }
                         }
                     }
-                }
-            
-                ScrollView(.horizontal, showsIndicators: false) {
                     HStack{
                         ForEach(myData.Mice2) {
                             Mouse in
@@ -52,7 +49,8 @@ struct CollectablesView: View {
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)
                             }
-                        }
+                }
+            
                     }
                 }
                 Text("App Challenges")
