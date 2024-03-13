@@ -3,6 +3,7 @@ import SwiftUI
 struct LibraryView: View {
     var Mydata = sharedData
     @State private var sheetvision = false
+    @State private var sheetvision2 = false
     @State var searchText = ""
     @State private var isSearching = false
     @State private var selectedFile: URL?
@@ -20,7 +21,6 @@ struct LibraryView: View {
                     NavigationLink(destination: AllBooksView()){
                         Rectangle()
                             .foregroundStyle(Color.clear)
-                            
                     }
                     HStack {
                         Text("Your Books")
@@ -37,20 +37,28 @@ struct LibraryView: View {
                         ForEach(FilteredBooks) {
                             Book in
                             VStack{
-                                NavigationLink(destination: ImmersiveReadingView()) {
-                                    ZStack {
-                                        Image(Book.cover)
-                                            .resizable()
-                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                            .frame(width: 115, height: 182)
-                                            .clipShape(RoundedRectangle(cornerRadius: 3))
-                                        Image("bookBase")
-                                            .resizable()
-                                            .frame(width: 115, height: 182)
-                                            .clipShape(RoundedRectangle(cornerRadius: 3))
-                                            .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                                Button(action: {
+                                    self.sheetvision2.toggle()
+                                }) {
+                                    //NavigationLink(ImmersiveReadingView()){
+                                        ZStack {
+                                            Image(Book.cover)
+                                                .resizable()
+                                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                                .frame(width: 115, height: 182)
+                                                .clipShape(RoundedRectangle(cornerRadius: 3))
+                                            Image("bookBase")
+                                                .resizable()
+                                                .frame(width: 115, height: 182)
+                                                .clipShape(RoundedRectangle(cornerRadius: 3))
+                                                .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                                        }
+                                        .sheet(isPresented: $sheetvision2) {
+                                            ImmersiveReadingView()
+                                                .ignoresSafeArea(.all)
+                                        }
                                     }
-                                }
+                               // }
                                 Text (Book.title)
                                     .font(.footnote)
 
