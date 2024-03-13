@@ -1,6 +1,6 @@
-# LibrarAI: Immersive Audiobook Experience
+# LibrAI: Immersive Audiobook Experience
 
-Welcome to **LibrarAI**, an innovative iOS application that transforms your reading experience into an immersive journey. Written in Swift, this app is designed to be your personal audible book companion, complete with AI-generated images and text-to-speech functionality to bring stories to life. As you dive into your favorite books, **LibrarAI** enhances each session with vivid imagery and expressive narration, crafted by advanced AI algorithms.
+Welcome to **LibrAI**, an innovative iOS application that transforms your reading experience into an immersive journey. Written in Swift, this app is designed to be your personal audible book companion, complete with AI-generated images and text-to-speech functionality to bring stories to life. As you dive into your favorite books, **LibrarAI** enhances each session with vivid imagery and expressive narration, crafted by advanced AI algorithms.
 
 ## Features
 - **AI-Powered Text-to-Speech**: Enjoy a natural and engaging reading experience with our state-of-the-art voice generation.
@@ -9,7 +9,7 @@ Welcome to **LibrarAI**, an innovative iOS application that transforms your read
 - **Library-Themed Collectibles**: Each collectible is uniquely designed to reflect the theme of the book you've read or the specific challenge you've conquered.
 
 ## Motivation
-The concept of **LibrarAI** stems from the Italian term "topo da biblioteca," meaning a person who loves to spend time reading books. True to its name, the app rewards its users with collectible mice, symbolizing the joy of reading and learning. The app's logo, a charming little mouse, embodies the spirit of a bibliophile.
+The concept of **LibrAI** stems from the Italian term "topo da biblioteca," meaning a person who loves to spend time reading books. True to its name, the app rewards its users with collectible mice, symbolizing the joy of reading and learning. The app's logo, a charming little mouse, embodies the spirit of a bibliophile.
 
 ## Getting Started
 To get started with **LibrarAI**, clone the repository and follow the setup instructions below.
@@ -26,7 +26,7 @@ To get started with **LibrarAI**, clone the repository and follow the setup inst
 Simply import an EPUB, and the app will guide you through an enchanting reading experience. Keep an eye out for special challenges that will reward you with exclusive collectibles!
 
 ## Contributions
-We welcome contributions to **LibrarAI**. If you have suggestions or want to contribute code, please feel free to make a pull request or open an issue.
+We welcome contributions to **LibrAI**. If you have suggestions or want to contribute code, please feel free to make a pull request or open an issue.
 
 ## Project Description
 (Work in Porgress)
