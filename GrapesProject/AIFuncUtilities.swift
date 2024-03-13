@@ -8,6 +8,8 @@
 import Foundation
 import OpenAI
 import SwiftOpenAI
+import AVFoundation
+import SwiftUI
 
 // Define a struct to handle configuration settings.
 struct Config {
@@ -66,7 +68,7 @@ func AudioGeneration(textInput: String, completion: @escaping (String?) -> Void)
         let data = try await openAI.createSpeech(
             model: .tts(.tts1), // Specify the text-to-speech model, here tts1.
             input: input, // Provide the input text.
-            voice: .alloy, // Choose the voice type, here 'alloy'.
+            voice: .onyx, // Choose the voice type, here 'alloy'.
             responseFormat: .mp3, // Set the audio response format as MP3.
             speed: 1.0 // Set the speed of the speech. 1.0 is normal speed.
         )
@@ -85,9 +87,39 @@ func AudioGeneration(textInput: String, completion: @escaping (String?) -> Void)
         }
     } catch {
         // Handle any errors encountered during the audio creation process.
+        print(error)
+    }
+}
+
+var player: AVAudioPlayer?
+
+func playSound(path: String) {
+    let url = URL(fileURLWithPath: path)
+
+    do {
+        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+        try AVAudioSession.sharedInstance().setActive(true)
+
+        player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+        guard let player = player else { return }
+
+        player.play()
+
+    } catch let error {
         print(error.localizedDescription)
     }
 }
+
+func setBackground(imagePath: String) -> some View {
+    ZStack {
+        Image(uiImage: UIImage(contentsOfFile: imagePath) ?? UIImage())
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
 
 
 
