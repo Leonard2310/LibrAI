@@ -3,7 +3,7 @@ import SwiftUI
 struct BookCardView: View {
     
     var book: book
-    
+    @State private var sheetvision2 = false
     var body: some View {
         ZStack{
             //Image(Background della view)
@@ -25,7 +25,9 @@ struct BookCardView: View {
                 
     
             HStack{
-                NavigationLink(destination: ImmersiveReadingView()) {
+                Button(action: {
+                    self.sheetvision2.toggle()
+                }) {
                     ZStack {
                         Image(book.cover)
                             .resizable()
@@ -43,9 +45,10 @@ struct BookCardView: View {
                             .frame(width: 50, height: 50)
                             .shadow(radius: 2)
                         
-                    
-                            
                     }
+                            
+                    } .fullScreenCover(isPresented: $sheetvision2) {
+                        ImmersiveReadingView()
                     
                 }
                 VStack (alignment: .leading){

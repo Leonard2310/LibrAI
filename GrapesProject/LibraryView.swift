@@ -40,7 +40,6 @@ struct LibraryView: View {
                                 Button(action: {
                                     self.sheetvision2.toggle()
                                 }) {
-                                    //NavigationLink(ImmersiveReadingView()){
                                         ZStack {
                                             Image(Book.cover)
                                                 .resizable()
@@ -58,7 +57,6 @@ struct LibraryView: View {
                                                 
                                         }
                                     }
-                               // }
                                 Text (Book.title)
                                     .font(.footnote)
 
