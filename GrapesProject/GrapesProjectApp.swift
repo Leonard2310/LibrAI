@@ -11,7 +11,7 @@ import SwiftUI
 struct GrapesProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            AITryView()
+            ContentView()
         }
     }
 }
