@@ -26,10 +26,27 @@ struct BookCardView: View {
     
             HStack{
                 NavigationLink(destination: ImmersiveReadingView()) {
-                    Image(book.cover)
-                        .resizable()
-                        .frame(width: 90, height: 140)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    ZStack {
+                        Image(book.cover)
+                            .resizable()
+                            .frame(width: 90, height: 140)
+                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                        Image("bookBase")
+                            .resizable()
+                            .frame(width: 90, height: 140)
+                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                            .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                        
+                        Image(systemName: "play.circle")
+                            .resizable()
+                            .foregroundColor(.white)
+                            .frame(width: 50, height: 50)
+                            .shadow(radius: 2)
+                        
+                    
+                            
+                    }
+                    
                 }
                 VStack (alignment: .leading){
                     VStack (alignment: .leading){
