@@ -8,6 +8,8 @@
 import Foundation
 import OpenAI
 import SwiftOpenAI
+import AVFoundation
+import SwiftUI
 
 // Define a struct to handle configuration settings.
 struct Config {
@@ -88,6 +90,36 @@ func AudioGeneration(textInput: String, completion: @escaping (String?) -> Void)
         print(error)
     }
 }
+
+var player: AVAudioPlayer?
+
+func playSound(path: String) {
+    let url = URL(fileURLWithPath: path)
+
+    do {
+        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+        try AVAudioSession.sharedInstance().setActive(true)
+
+        player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+        guard let player = player else { return }
+
+        player.play()
+
+    } catch let error {
+        print(error.localizedDescription)
+    }
+}
+
+func setBackground(imagePath: String) -> some View {
+    ZStack {
+        Image(uiImage: UIImage(contentsOfFile: imagePath) ?? UIImage())
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
 
 
 

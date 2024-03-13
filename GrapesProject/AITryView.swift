@@ -5,25 +5,20 @@ import OpenAI
 import SwiftOpenAI
 
 struct AITryView: View {
-    @State private var imagePrompt: String = "Un paesaggio futuristico"
-    @State private var audioPrompt: String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.!"
+    @State private var audioPrompt: String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
+    @State private var imagePrompt: String = "Rappresentami questa situazione: The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
+    
     @State private var imageURL: URL?
     @State private var audioURL: URL?
     @State private var audioPlayer: AVPlayer?
-
+    
     var body: some View {
         VStack(spacing: 20) {
             if let imageURL = imageURL {
-                AsyncImage(url: imageURL) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: 300, height: 200)
-                .cornerRadius(10)
+                setBackground(imagePath: imageURL.path)
             }
-
-            Button("Genera Immagine") {
+            
+            Button("Image Generation") {
                 Task {
                     await ImageGeneration(textPrompt: imagePrompt) { url in
                         if let urlString = url, let url = URL(string: urlString) {
@@ -32,19 +27,18 @@ struct AITryView: View {
                     }
                 }
             }
-
+            
             if audioURL != nil {
                 Button("Play Audio") {
                     audioPlayer?.play()
                 }
             }
-
-            Button("Genera Audio") {
+            
+            Button("Audio Generation") {
                 Task {
                     await AudioGeneration(textInput: audioPrompt) { path in
-                        if let path = path, let url = URL(string: path) {
-                            self.audioURL = url
-                            self.audioPlayer = AVPlayer(url: url)
+                        if let path = path {
+                            playSound(path: path)
                         }
                     }
                 }
