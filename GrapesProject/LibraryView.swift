@@ -121,11 +121,11 @@ struct LibraryView: View {
                         self.selectedFile = fileURL
                         
                         //Creo un EpubDocument
-                        var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL)!
+                        let eDocument: EPUBDocument = loadEPUBDocument(from: fileURL)!
                         
                         //chiamo le utilities per creare il book obj
                         
-                        var newBook: book = book(title: extractTitle(document: eDocument),urlCover: extractCover(document: eDocument),author: extractAuthor(document: eDocument))
+                        let newBook: book = book(title: extractTitle(document: eDocument), urlCover: extractCover(document: eDocument), bookEpub: eDocument,author: extractAuthor(document: eDocument))
                         
                         //aggiungo il libro al "database" che database non è
                         Mydata.Books.append(newBook)
