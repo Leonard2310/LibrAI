@@ -4,8 +4,8 @@ Welcome to **LibrAI**, an innovative iOS application that transforms your readin
 
 ## Features
 - **AI-Powered Text-to-Speech**: Enjoy a natural and engaging reading experience with our state-of-the-art voice generation.
-- **Dynamic Image Generation**: Visualize the story with background images that evolve as you progress through the book.
-- **Collectibles Rewards**: Earn adorable mouse-themed collectibles as you complete reading challenges and milestones.
+- **Dynamic Image Generation**: Visualize the story with background images that evolve as you progress through the book. (WORK IN PROGRESS)
+- **Collectibles Rewards**: Earn adorable mouse-themed collectibles as you complete reading challenges and milestones. (WORK IN PROGRESS)
 - **Library-Themed Collectibles**: Each collectible is uniquely designed to reflect the theme of the book you've read or the specific challenge you've conquered.
 
 ## Motivation
