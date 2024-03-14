@@ -101,8 +101,11 @@ struct ImmersiveReadingView: View {
                             .foregroundColor(.white)
                             
                             Button("", systemImage: "play.fill") {
-                                audioPlayer.pause()
+                                if audioPlayer != nil {
+                                    audioPlayer!.pause()
+                                }
                                 Task {
+                                    audioPlayer.pause()
                                     await AudioGeneration(textInput: audioPrompt) { path in
                                         do {
                                             if let path {
@@ -151,6 +154,10 @@ struct ImmersiveReadingView: View {
             .padding(.leading, 350)
             .frame(width: 500, height: 300)
         }
+        .onAppear(perform: {
+            let sound = Bundle.main.path(forResource: "speech", ofType: "mp3")
+            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        })
     }
 }
 
