@@ -90,7 +90,7 @@ struct LibraryView: View {
                 
             }
             .padding(.leading)
-            Text ("Least Read")
+            Text ("Last Read")
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding(.trailing, 230.0)

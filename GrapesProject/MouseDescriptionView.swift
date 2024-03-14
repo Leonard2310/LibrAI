@@ -9,15 +9,19 @@ import SwiftUI
 
 struct MouseDescriptionView: View {
     var mouse: mouse // Aggiungi questa riga
-
+    
     var body: some View {
         VStack {
-            HStack {
+            HStack(spacing: 30){
                 Image(mouse.mouseImage)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
                     .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black, lineWidth: 0.5)
+                    )
                     .shadow(radius: 10)
                     .padding([.leading, .top])
                 VStack(alignment: .leading, spacing: 10){
@@ -37,10 +41,12 @@ struct MouseDescriptionView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
-                Text(mouse.mouseDescription)
-                    .font(.body)
-                    .fontWeight(.regular)
-                    .multilineTextAlignment(.leading)
+                ScrollView {
+                    Text(mouse.mouseDescription)
+                        .font(.body)
+                        .fontWeight(.regular)
+                        .multilineTextAlignment(.leading)
+                }
             }
             .padding([.leading, .trailing])
             Spacer()
