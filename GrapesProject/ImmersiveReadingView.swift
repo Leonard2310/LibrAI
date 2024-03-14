@@ -19,12 +19,14 @@ struct ImmersiveReadingView: View {
     @State private var audioURL: URL?
     @State private var audioPlayer: AVAudioPlayer!
     
+    var Booktest : book
+    
     var audioPrompt : String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
 
     
     var body: some View {
         ZStack{
-            Image("GoT_Background")
+            Image(Booktest.lastBackground)
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
@@ -162,5 +164,6 @@ struct ImmersiveReadingView: View {
 }
 
 #Preview {
-    ImmersiveReadingView()
+    ImmersiveReadingView(Booktest: book(title: "A Game of Thrones", lastBackground: "GoT_Background"))
+    
 }
