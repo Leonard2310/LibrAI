@@ -37,13 +37,6 @@ We welcome contributions to **LibrAI**. If you have suggestions or want to contr
 (Work in Porgress)
 
 ## Authors
-<table>
-  <tr>
-    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba" width="75" height="75"></td>
-    <td><h3>GRAPES</h3></td>
-  </tr>
-</table>
-
 - [Leonardo Catello](https://github.com/Leonard2310) 
 - [Lorenzo Manco](https://github.com/Rasbon99)
 - [Salvatore Cangiano](https://github.com/Salvr28) 
