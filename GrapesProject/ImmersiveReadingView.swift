@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AVFAudio
 
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
@@ -14,19 +13,11 @@ struct ImmersiveReadingView: View {
     //@GestureState private var dragOffset = CGSize.zero
     @State private var isDragging = false
     @Environment(\.dismiss) var dismiss
-    
-    @State private var imageURL: URL?
-    @State private var audioURL: URL?
-    @State private var audioPlayer: AVAudioPlayer!
-    
-    var Booktest : book
-    
-    var audioPrompt : String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
 
     
     var body: some View {
         ZStack{
-            Image(Booktest.lastBackground)
+            Image("GoT_Background")
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
@@ -41,7 +32,7 @@ struct ImmersiveReadingView: View {
                         .overlay(
                             
                             ScrollViewReader(content: { proxy in
-                                Text(audioPrompt)
+                                Text("The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done.")
                                     .foregroundColor(.white)
                                     .padding()
                                     .lineLimit(nil)
@@ -102,24 +93,8 @@ struct ImmersiveReadingView: View {
                             .frame(width: 25.0, height: 25.0)
                             .foregroundColor(.white)
                             
-                            Button("", systemImage: "play.fill") {
-                                if audioPlayer != nil {
-                                    audioPlayer!.pause()
-                                }
-                                Task {
-                                    audioPlayer.pause()
-                                    await AudioGeneration(textInput: audioPrompt) { path in
-                                        do {
-                                            if let path {
-                                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-                                            }
-                                        } catch {
-                                            print(error.localizedDescription)
-                                        }
-                                        audioPlayer.play()
-                                    }
-                                }
-                                
+                            Button("", systemImage: "play.fill")  {
+                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }
                             .frame(width: 40.0, height: 40.0)
                             .foregroundColor(.white)
@@ -156,14 +131,9 @@ struct ImmersiveReadingView: View {
             .padding(.leading, 350)
             .frame(width: 500, height: 300)
         }
-        .onAppear(perform: {
-            let sound = Bundle.main.path(forResource: "speech", ofType: "mp3")
-            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-        })
     }
 }
 
 #Preview {
-    ImmersiveReadingView(Booktest: book(title: "A Game of Thrones", lastBackground: "GoT_Background"))
-    
+    ImmersiveReadingView()
 }
