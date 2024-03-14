@@ -29,13 +29,13 @@ struct ImmersiveReadingView: View {
     }
     
     var body: some View {
-        ZStack{
+        ZStack {
             Image(Booktest.lastBackground)
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
             
-            VStack{
+            VStack {
                 Spacer()
                 
                 ZStack (alignment: .top){
@@ -83,21 +83,18 @@ struct ImmersiveReadingView: View {
                 }
                 
                 ZStack{
-                    
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
                         .frame(width: 337.0, height: 65.0)
                     
-                    HStack{
+                    HStack(spacing: 40) {
                         Button("", systemImage: "square.and.arrow.up")  {
                             
                         }
                         .frame(width: 25.0, height: 25.0)
                         .foregroundColor(.white)
-                        .padding(.trailing, 15.0)
                         
-                        
-                        HStack {
+                        HStack(spacing: 25){
                             
                             Button("", systemImage: "backward.fill")  {
                                 
@@ -146,18 +143,14 @@ struct ImmersiveReadingView: View {
                             }
                             .frame(width: 25.0, height: 25.0)
                             .foregroundColor(.white)
-                            
                         }
-                        
                         Button("", systemImage: "airplayaudio")  {
                             /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                         }
-                        .padding(.leading, 30.0)
                         .frame(width: 25.0, height: 25.0)
                         .foregroundColor(.white)
                     }
                     .padding(.bottom)
-                    .padding(.leading, -10)
                     ProgressView(value: Double(currentSentence) / Double(sentences.count))
                         .padding(.top, 40)
                         .frame(width: 270.0)
