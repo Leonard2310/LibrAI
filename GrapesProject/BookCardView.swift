@@ -4,7 +4,7 @@ struct BookCardView: View {
     
     var Mydata = sharedData
     var book: book
-    @State private var sheetvision2 = false
+    @State private var sheetvision = false
     var body: some View {
         ZStack{
             //Image(Background della view)
@@ -27,7 +27,7 @@ struct BookCardView: View {
     
             HStack{
                 Button(action: {
-                    self.sheetvision2.toggle()
+                    self.sheetvision.toggle()
                 }) {
                     ZStack {
                         Image(book.cover)
@@ -48,7 +48,7 @@ struct BookCardView: View {
                         
                     }
                             
-                    } .fullScreenCover(isPresented: $sheetvision2) {
+                    } .fullScreenCover(isPresented: $sheetvision) {
                         ImmersiveReadingView(Booktest: GrapesProject.book(title: book.title, lastBackground: book.lastBackground))
                     
                 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct AllBooksView: View {
     var Mydata = sharedData
     @State var searchText = ""
+    @State private var sheetvision = false
     var FilteredBooks: [book] {
         guard !searchText.isEmpty else { return Mydata.Books}
         return Mydata.Books.filter{
@@ -24,21 +25,22 @@ struct AllBooksView: View {
             ScrollView(showsIndicators: false){
                 
                 LazyVGrid(columns: columns){
-                    ForEach(FilteredBooks) {
-                        Book in
+                    ForEach(FilteredBooks) { Book in
                         VStack{
-                            NavigationLink(destination: ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))) {
-                                Image (Book.cover)
-                                    .resizable()
-                                //.aspectRatio(contentMode: .fit)
-                                    .frame(width: 115, height: 182)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                            }
+                            Image (Book.cover)
+                                .resizable()
+                                .frame(width: 115, height: 182)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                                .onTapGesture {
+                                    sheetvision = true
+                                }
+
                             Text (Book.title)
                                 .font(.footnote)
-                            
                         }
-                        
+                        .fullScreenCover(isPresented: $sheetvision) {
+                            ImmersiveReadingView(Booktest: GrapesProject.book(title: Book.title, lastBackground: Book.lastBackground))
+                        }
                     }
                 }
             }
