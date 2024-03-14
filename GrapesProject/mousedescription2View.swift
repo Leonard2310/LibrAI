@@ -1,17 +1,17 @@
 //
-//  mousedescription1View.swift
+//  mousedescription2View.swift
 //  GrapesProject
 //
-//  Created by Alessandro Giuseppe Palmieri on 13/03/24.
+//  Created by Alessandro Giuseppe Palmieri on 14/03/24.
 //
 
 import SwiftUI
 
-struct mousedescription1View: View {
+struct mousedescription2View: View {
     var body: some View {
         
             HStack {
-                Image("alex")
+                Image("challenge avventura")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
@@ -19,11 +19,11 @@ struct mousedescription1View: View {
                     .shadow(radius: 10)
                     .padding()
                 VStack{
-                    Text("Alex the junior reader")
+                    Text("50 shades of flight")
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                    Text("Challenge: read 10 books")
+                    Text("Challenge: read 5 adventure booksbooks")
                         .font(.body)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.center)
@@ -34,13 +34,10 @@ struct mousedescription1View: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("Congratulations you have finished reading 10 books. This is Alex, our red hair junior reader. ")
+                    Text("Congratulations you have finished reading 5 adventure books. My name is Phineas Mousy and I'd like having my next advenure with you. C'mon, it's time to live a new adventure.")
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
-                    Text("Why don't you read your next book together?")
-                        .font(.body)
-                        .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
+                    
                 }//MARK: End of VStack
         Spacer()
         
@@ -48,5 +45,5 @@ struct mousedescription1View: View {
         }
 
 #Preview {
-    mousedescription1View()
+    mousedescription2View()
 }

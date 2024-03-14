@@ -1,17 +1,17 @@
 //
-//  mousedescription1View.swift
+//  mousedescription10View.swift
 //  GrapesProject
 //
-//  Created by Alessandro Giuseppe Palmieri on 13/03/24.
+//  Created by Alessandro Giuseppe Palmieri on 14/03/24.
 //
 
 import SwiftUI
 
-struct mousedescription1View: View {
+struct mousedescription10View: View {
     var body: some View {
         
             HStack {
-                Image("alex")
+                Image("8")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
@@ -22,11 +22,11 @@ struct mousedescription1View: View {
                     Text("Alex the junior reader")
                         .font(.body)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                     Text("Challenge: read 10 books")
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                 }//MARK: End of VStack
             }//MARK: End of HStack
                 VStack {
@@ -48,5 +48,5 @@ struct mousedescription1View: View {
         }
 
 #Preview {
-    mousedescription1View()
+    mousedescription10View()
 }

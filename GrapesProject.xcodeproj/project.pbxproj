@@ -34,6 +34,20 @@
 		CEFE3B6B2BA0B06C0083D433 /* SwiftOpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = CEFE3B6A2BA0B06C0083D433 /* SwiftOpenAI */; };
 		CEFE3B6F2BA0B3770083D433 /* AITryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B6E2BA0B3770083D433 /* AITryView.swift */; };
 		FBE808D22BA2162700FC77AC /* mousedescription1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D12BA2162700FC77AC /* mousedescription1View.swift */; };
+		FBE808D42BA26A9800FC77AC /* mousedescription2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D32BA26A9800FC77AC /* mousedescription2View.swift */; };
+		FBE808D62BA26CE600FC77AC /* mousedescription3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D52BA26CE600FC77AC /* mousedescription3View.swift */; };
+		FBE808D82BA26F5400FC77AC /* mousedescription4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D72BA26F5400FC77AC /* mousedescription4View.swift */; };
+		FBE808DA2BA26F5E00FC77AC /* mousedescription5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808D92BA26F5E00FC77AC /* mousedescription5View.swift */; };
+		FBE808DC2BA26F6A00FC77AC /* mousedescription6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808DB2BA26F6A00FC77AC /* mousedescription6View.swift */; };
+		FBE808DE2BA26F7600FC77AC /* mousedescription7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808DD2BA26F7600FC77AC /* mousedescription7View.swift */; };
+		FBE808E02BA26F8000FC77AC /* mousedescription8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808DF2BA26F8000FC77AC /* mousedescription8View.swift */; };
+		FBE808E22BA26F8F00FC77AC /* mousedescription9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808E12BA26F8F00FC77AC /* mousedescription9View.swift */; };
+		FBE808E42BA26F9A00FC77AC /* mousedescription10View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808E32BA26F9A00FC77AC /* mousedescription10View.swift */; };
+		FBE808E62BA26FA800FC77AC /* mousedescription11View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808E52BA26FA800FC77AC /* mousedescription11View.swift */; };
+		FBE808E82BA26FB800FC77AC /* mousedescription12View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808E72BA26FB800FC77AC /* mousedescription12View.swift */; };
+		FBE808EA2BA26FC100FC77AC /* mousedescription13View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808E92BA26FC100FC77AC /* mousedescription13View.swift */; };
+		FBE808EC2BA26FCC00FC77AC /* mousedescription14View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808EB2BA26FCC00FC77AC /* mousedescription14View.swift */; };
+		FBE808EE2BA26FD900FC77AC /* mousedescription15View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE808ED2BA26FD900FC77AC /* mousedescription15View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +76,20 @@
 		CEFE3B6E2BA0B3770083D433 /* AITryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITryView.swift; sourceTree = "<group>"; };
 		CEFE3B702BA0BC6D0083D433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FBE808D12BA2162700FC77AC /* mousedescription1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription1View.swift; sourceTree = "<group>"; };
+		FBE808D32BA26A9800FC77AC /* mousedescription2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription2View.swift; sourceTree = "<group>"; };
+		FBE808D52BA26CE600FC77AC /* mousedescription3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription3View.swift; sourceTree = "<group>"; };
+		FBE808D72BA26F5400FC77AC /* mousedescription4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription4View.swift; sourceTree = "<group>"; };
+		FBE808D92BA26F5E00FC77AC /* mousedescription5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription5View.swift; sourceTree = "<group>"; };
+		FBE808DB2BA26F6A00FC77AC /* mousedescription6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription6View.swift; sourceTree = "<group>"; };
+		FBE808DD2BA26F7600FC77AC /* mousedescription7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription7View.swift; sourceTree = "<group>"; };
+		FBE808DF2BA26F8000FC77AC /* mousedescription8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription8View.swift; sourceTree = "<group>"; };
+		FBE808E12BA26F8F00FC77AC /* mousedescription9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription9View.swift; sourceTree = "<group>"; };
+		FBE808E32BA26F9A00FC77AC /* mousedescription10View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription10View.swift; sourceTree = "<group>"; };
+		FBE808E52BA26FA800FC77AC /* mousedescription11View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription11View.swift; sourceTree = "<group>"; };
+		FBE808E72BA26FB800FC77AC /* mousedescription12View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription12View.swift; sourceTree = "<group>"; };
+		FBE808E92BA26FC100FC77AC /* mousedescription13View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription13View.swift; sourceTree = "<group>"; };
+		FBE808EB2BA26FCC00FC77AC /* mousedescription14View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription14View.swift; sourceTree = "<group>"; };
+		FBE808ED2BA26FD900FC77AC /* mousedescription15View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mousedescription15View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +130,6 @@
 				4DBD4AD12B98CDDF00E7EF91 /* GrapesProjectApp.swift */,
 				4D4B30142B9A1A7C00B89C5A /* TryView.swift */,
 				4DBD4ADF2B98CE1D00E7EF91 /* LibraryView.swift */,
-				FBE808D12BA2162700FC77AC /* mousedescription1View.swift */,
 				4DBD4AD32B98CDDF00E7EF91 /* ContentView.swift */,
 				CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */,
 				4DBD4AE32B98CEFB00E7EF91 /* ContainerView.swift */,
@@ -118,6 +145,21 @@
 				CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */,
 				CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */,
 				CEFE3B6E2BA0B3770083D433 /* AITryView.swift */,
+				FBE808D12BA2162700FC77AC /* mousedescription1View.swift */,
+				FBE808D32BA26A9800FC77AC /* mousedescription2View.swift */,
+				FBE808D52BA26CE600FC77AC /* mousedescription3View.swift */,
+				FBE808D72BA26F5400FC77AC /* mousedescription4View.swift */,
+				FBE808D92BA26F5E00FC77AC /* mousedescription5View.swift */,
+				FBE808DB2BA26F6A00FC77AC /* mousedescription6View.swift */,
+				FBE808DD2BA26F7600FC77AC /* mousedescription7View.swift */,
+				FBE808DF2BA26F8000FC77AC /* mousedescription8View.swift */,
+				FBE808E12BA26F8F00FC77AC /* mousedescription9View.swift */,
+				FBE808E32BA26F9A00FC77AC /* mousedescription10View.swift */,
+				FBE808E52BA26FA800FC77AC /* mousedescription11View.swift */,
+				FBE808E72BA26FB800FC77AC /* mousedescription12View.swift */,
+				FBE808E92BA26FC100FC77AC /* mousedescription13View.swift */,
+				FBE808EB2BA26FCC00FC77AC /* mousedescription14View.swift */,
+				FBE808ED2BA26FD900FC77AC /* mousedescription15View.swift */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				CEAFC0FD2B9B3FFE003A8D55 /* Books */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
@@ -228,13 +270,24 @@
 			files = (
 				0953AD3B2B9F529F0098CE8A /* BackgroundView.swift in Sources */,
 				4DBD4AE42B98CEFB00E7EF91 /* ContainerView.swift in Sources */,
+				FBE808EA2BA26FC100FC77AC /* mousedescription13View.swift in Sources */,
 				CEFE3B652BA0A6860083D433 /* AIFuncUtilities.swift in Sources */,
+				FBE808EC2BA26FCC00FC77AC /* mousedescription14View.swift in Sources */,
 				0921D72C2BA0B7330089ECBD /* NewMouseView.swift in Sources */,
+				FBE808E02BA26F8000FC77AC /* mousedescription8View.swift in Sources */,
+				FBE808E22BA26F8F00FC77AC /* mousedescription9View.swift in Sources */,
 				CE67F4BD2B9A19C200E74112 /* Data.swift in Sources */,
+				FBE808E62BA26FA800FC77AC /* mousedescription11View.swift in Sources */,
 				CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */,
 				CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */,
+				FBE808DA2BA26F5E00FC77AC /* mousedescription5View.swift in Sources */,
+				FBE808DE2BA26F7600FC77AC /* mousedescription7View.swift in Sources */,
 				CEFE3B6F2BA0B3770083D433 /* AITryView.swift in Sources */,
+				FBE808D62BA26CE600FC77AC /* mousedescription3View.swift in Sources */,
+				FBE808D42BA26A9800FC77AC /* mousedescription2View.swift in Sources */,
+				FBE808D82BA26F5400FC77AC /* mousedescription4View.swift in Sources */,
 				FBE808D22BA2162700FC77AC /* mousedescription1View.swift in Sources */,
+				FBE808E42BA26F9A00FC77AC /* mousedescription10View.swift in Sources */,
 				CEFE3B632BA09EDF0083D433 /* FuncUtilities.swift in Sources */,
 				4DBD4AD42B98CDDF00E7EF91 /* ContentView.swift in Sources */,
 				4D4B30152B9A1A7C00B89C5A /* TryView.swift in Sources */,
@@ -242,8 +295,11 @@
 				0953AD372B9F3B4B0098CE8A /* BookCardView.swift in Sources */,
 				4DBD4AE02B98CE1D00E7EF91 /* LibraryView.swift in Sources */,
 				86E062FA2B9C9628001EDC0C /* AllBooksView.swift in Sources */,
+				FBE808DC2BA26F6A00FC77AC /* mousedescription6View.swift in Sources */,
+				FBE808E82BA26FB800FC77AC /* mousedescription12View.swift in Sources */,
 				4DBD4AD22B98CDDF00E7EF91 /* GrapesProjectApp.swift in Sources */,
 				861ED4CA2B9BBD590069F85A /* AddBookView.swift in Sources */,
+				FBE808EE2BA26FD900FC77AC /* mousedescription15View.swift in Sources */,
 				CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

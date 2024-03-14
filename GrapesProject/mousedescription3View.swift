@@ -1,17 +1,17 @@
 //
-//  mousedescription1View.swift
+//  mousedescription3View.swift
 //  GrapesProject
 //
-//  Created by Alessandro Giuseppe Palmieri on 13/03/24.
+//  Created by Alessandro Giuseppe Palmieri on 14/03/24.
 //
 
 import SwiftUI
 
-struct mousedescription1View: View {
+struct mousedescription3View: View {
     var body: some View {
         
             HStack {
-                Image("alex")
+                Image("1")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 150)
@@ -19,14 +19,14 @@ struct mousedescription1View: View {
                     .shadow(radius: 10)
                     .padding()
                 VStack{
-                    Text("Alex the junior reader")
+                    Text("The Little Prince Mouse: the dreamy rodent and the rose")
                         .font(.body)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
-                    Text("Challenge: read 10 books")
+                        .multilineTextAlignment(.leading)
+                    Text("The Little Prince")
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                 }//MARK: End of VStack
             }//MARK: End of HStack
                 VStack {
@@ -34,10 +34,10 @@ struct mousedescription1View: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("Congratulations you have finished reading 10 books. This is Alex, our red hair junior reader. ")
+                    Text("Congratulations you have finished reading the book The Little Prince. ")
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
-                    Text("Why don't you read your next book together?")
+                    Text("Prepare your miniature aviator’s cap, dear dreamer! You’ve soared through the celestial pages of Antoine de Saint-Exupéry’s enchanting tale, the echo of rose petals, the laughter of stars, and the poignant wisdom of a child’s heart. As you close the final chapter of “The Little Prince,” a golden comet ignites in your heart, a beacon of wonder that transcends galaxies.")
                         .font(.body)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
@@ -48,5 +48,5 @@ struct mousedescription1View: View {
         }
 
 #Preview {
-    mousedescription1View()
+    mousedescription3View()
 }
