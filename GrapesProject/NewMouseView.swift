@@ -58,7 +58,7 @@ struct NewMouseView: View {
         NavigationStack {
             VStack {
                 Button(action: {
-                    if let randomMouse = myData.Mice1.randomElement() {
+                    if let randomMouse = myData.Mice.randomElement() {
                         withAnimation(.interpolatingSpring(stiffness: 150, damping: 10)) {
                             self.mouse = randomMouse
                             self.youWin = true
