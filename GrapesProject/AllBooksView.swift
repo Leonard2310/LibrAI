@@ -9,9 +9,7 @@ import SwiftUI
 
 struct AllBooksView: View {
     var Mydata = sharedData
-    @State private var sheetvision2 = false
     @State var searchText = ""
-   // var book : book
     var FilteredBooks: [book] {
         guard !searchText.isEmpty else { return Mydata.Books}
         return Mydata.Books.filter{
@@ -28,26 +26,17 @@ struct AllBooksView: View {
                 LazyVGrid(columns: columns){
                     ForEach(FilteredBooks) {
                         Book in
-                        Button(action: {
-                            self.sheetvision2.toggle()
-                        }) {
-                            VStack{
-                                //  NavigationLink(destination: CollectablesView()) {
+                        VStack{
+                            NavigationLink(destination: ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))) {
                                 Image (Book.cover)
                                     .resizable()
                                 //.aspectRatio(contentMode: .fit)
                                     .frame(width: 115, height: 182)
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                                
-                                // }
-                                Text (Book.title)
-                                    .font(.footnote)
-                                    .foregroundColor(.black)
-                                
                             }
-                            .fullScreenCover(isPresented: $sheetvision2) {
-                                ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))
-                            }
+                            Text (Book.title)
+                                .font(.footnote)
+                            
                         }
                         
                     }
@@ -58,7 +47,6 @@ struct AllBooksView: View {
         }
     }
 }
-    
 
 #Preview {
     AllBooksView()

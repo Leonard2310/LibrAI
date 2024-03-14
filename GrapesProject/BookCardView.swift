@@ -2,6 +2,7 @@ import SwiftUI
 
 struct BookCardView: View {
     
+    var Mydata = sharedData
     var book: book
     @State private var sheetvision2 = false
     var body: some View {
@@ -11,7 +12,7 @@ struct BookCardView: View {
                 .resizable()
                 .blur(radius: 0.8)
                 //.padding(.top, 5.0)
-                .aspectRatio(contentMode: .fill)       
+                .aspectRatio(contentMode: .fill)
                 .frame(width: 330, height: 190)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
 
@@ -48,7 +49,7 @@ struct BookCardView: View {
                     }
                             
                     } .fullScreenCover(isPresented: $sheetvision2) {
-                        ImmersiveReadingView()
+                      //  ImmersiveReadingView()
                     
                 }
                 VStack (alignment: .leading){

@@ -1,4 +1,5 @@
 import SwiftUI
+import EPUBKit
 
 struct LibraryView: View {
     var Mydata = sharedData
@@ -7,7 +8,7 @@ struct LibraryView: View {
     @State var searchText = ""
     @State private var isSearching = false
     @State private var selectedFile: URL?
-
+    
     var FilteredBooks: [book] {
         guard !searchText.isEmpty else { return Mydata.Books}
         return Mydata.Books.filter{
@@ -40,32 +41,53 @@ struct LibraryView: View {
                                 Button(action: {
                                     self.sheetvision2.toggle()
                                 }) {
-                                        ZStack {
+                                    ZStack {
+                                        if Book.urlCover != nil{
+                                            AsyncImage(url: Book.urlCover){phase in
+                                                
+                                                if let image = phase.image{
+                                                    image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                                    .frame(width: 115, height: 182)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 3))
+                                                } else if phase.error != nil {
+                                                    // In caso di errore
+                                                    Text("Errore durante il caricamento dell'immagine")
+                                                } else {
+                                                    // Durante il caricamento
+                                                    ContentView()
+                                                }
+                                                    
+                                            }
+                                                
+                                        }else{
                                             Image(Book.cover)
                                                 .resizable()
                                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
                                                 .frame(width: 115, height: 182)
                                                 .clipShape(RoundedRectangle(cornerRadius: 3))
-                                            Image("bookBase")
-                                                .resizable()
-                                                .frame(width: 115, height: 182)
-                                                .clipShape(RoundedRectangle(cornerRadius: 3))
-                                                .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
                                         }
-                                        .fullScreenCover(isPresented: $sheetvision2) {
-                                            ImmersiveReadingView()
-                                                
-                                        }
+                                        Image("bookBase")
+                                            .resizable()
+                                            .frame(width: 115, height: 182)
+                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                            .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
                                     }
+                                    .fullScreenCover(isPresented: $sheetvision2) {
+                                        ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))
+                                        
+                                    }
+                                }
                                 Text (Book.title)
                                     .font(.footnote)
-
+                                
                             }
                         }
                     }
-
+                    
                 }
-
+                
             }
             .padding(.leading)
             Text ("Least Read")
@@ -75,7 +97,6 @@ struct LibraryView: View {
                 .padding(.top,20.0)
                 .padding(.leading)
             TabView{
-
                 ForEach(Mydata.LastReadBooks) {
                     Book in
                     BookCardView(book: book(title: Book.title, cover: Book.cover, author: Book.author, lastBackground: Book.lastBackground))
@@ -98,18 +119,28 @@ struct LibraryView: View {
                         let fileURL = try result.get().first!
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
-
+                        
+                        //Creo un EpubDocument
+                        var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL)!
+                        
+                        //chiamo le utilities per creare il book obj
+                        
+                        var newBook: book = book(title: extractTitle(document: eDocument),urlCover: extractCover(document: eDocument),author: extractAuthor(document: eDocument))
+                        
+                        //aggiungo il libro al "database" che database non è
+                        Mydata.Books.append(newBook)
+                        
                         // Aggiungi il file alla cartella "Books" nella directory dell'app
                         let fileManager = FileManager.default
                         let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
                         let booksDirectory = documentsDirectory.appendingPathComponent("Books")
                         let destinationURL = booksDirectory.appendingPathComponent(fileURL.lastPathComponent)
-
+                        
                         // Crea la cartella "Books" se non esiste
                         if !fileManager.fileExists(atPath: booksDirectory.path) {
                             try fileManager.createDirectory(at: booksDirectory, withIntermediateDirectories: true, attributes: nil)
                         }
-
+                        
                         // Copia il file nella cartella "Books"
                         if !fileManager.fileExists(atPath: destinationURL.path) {
                             try fileManager.copyItem(at: fileURL, to: destinationURL)
@@ -123,9 +154,9 @@ struct LibraryView: View {
         }
         .navigationTitle("Library")
         .searchable(text: $searchText, prompt: "Search a book")
-
+        
     }
-
+    
 }
 #Preview {
     LibraryView()
