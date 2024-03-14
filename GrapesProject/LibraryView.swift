@@ -1,4 +1,6 @@
 import SwiftUI
+import EPUBKit
+
 
 struct LibraryView: View {
     var Mydata = sharedData
@@ -39,11 +41,15 @@ struct LibraryView: View {
                             VStack{
                                 NavigationLink(destination: ImmersiveReadingView()) {
                                     ZStack {
-                                        Image(Book.cover)
-                                            .resizable()
-                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                            .frame(width: 115, height: 182)
-                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        if Book.urlCover != nil {
+                                            AsyncImage(url: Book.urlCover)
+                                        }else{
+                                            Image(Book.cover)
+                                                .resizable()
+                                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                                .frame(width: 115, height: 182)
+                                                .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        }
                                         Image("bookBase")
                                             .resizable()
                                             .frame(width: 115, height: 182)
@@ -89,9 +95,21 @@ struct LibraryView: View {
                     allowsMultipleSelection: false
                 ) { result in
                     do {
+                        
+                        //Get the URL of the selected Epub
                         let fileURL = try result.get().first!
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
+                        
+                        //Creo un EpubDocument
+                        var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL) ?? <#default value#>
+                        
+                        //chiamo le utilities per creare il book obj
+                        
+                        var newBook: book = book(title: extractTitle(document: eDocument),urlCover: extractCover(document: eDocument),author: extractAuthor(document: eDocument))
+                        
+                        //aggiungo il libro al "database" che database non è
+                        Mydata.Books.append(newBook)
 
                         // Aggiungi il file alla cartella "Books" nella directory dell'app
                         let fileManager = FileManager.default
@@ -121,6 +139,7 @@ struct LibraryView: View {
     }
 
 }
+
 #Preview {
     LibraryView()
 }
