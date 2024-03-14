@@ -6,3 +6,4 @@ GrapesProject.xcodeproj/project.xcworkspace/xcuserdata/leonardocatello.xcuserdat
 GrapesProject.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
 GrapesProject/Info.plist
 GrapesProject/Info.plist
+*.plist
