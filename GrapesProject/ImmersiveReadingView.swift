@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
-    @State private var RectReadingHeigh: CGFloat = 263.0
+    @State private var RectReadingHeight: CGFloat = 263.0
     //@GestureState private var dragOffset = CGSize.zero
     @State private var isDragging = false
     @Environment(\.dismiss) var dismiss
@@ -28,7 +28,7 @@ struct ImmersiveReadingView: View {
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
                         .frame(width: 337.0
-                               , height: RectReadingHeigh)
+                               , height: RectReadingHeight)
                         .overlay(
                             
                             ScrollViewReader(content: { proxy in
@@ -50,26 +50,23 @@ struct ImmersiveReadingView: View {
                         .cornerRadius(3) // Rounded corners
                         .offset(y: 10) // Position the grabber
                         .gesture(
-                            DragGesture(minimumDistance: 10, coordinateSpace: .local)
-                                .onChanged { value in
-                                    withAnimation (.interpolatingSpring(stiffness: 50, damping: 2000)) {
-                                        if RectReadingHeigh == 263 && value.translation.height < -50 {
-                                            RectReadingHeigh = 619
+                            TapGesture(count: 1)
+                                .onEnded { _ in
+                                    withAnimation(.interpolatingSpring(stiffness: 50, damping: 2000)) {
+                                        if RectReadingHeight == 263 {
+                                            RectReadingHeight = 619
                                             isDragging = true
-                                        } else if RectReadingHeigh == 263 && value.translation.height > 50 {
-                                            RectReadingHeigh = 0
+                                        } else if RectReadingHeight == 619 {
+                                            RectReadingHeight = 0
                                             isDragging = true
-                                        } else if RectReadingHeigh == 619 && value.translation.height > 50 {
-                                            RectReadingHeigh = 263
-                                            isDragging = true
-                                        } else if RectReadingHeigh == 0 && value.translation.height < -50 {
-                                            RectReadingHeigh = 263
+                                        } else if RectReadingHeight == 0 {
+                                            RectReadingHeight = 263
                                             isDragging = true
                                         } else {
-                                        isDragging = false
+                                            isDragging = false
+                                        }
                                     }
                                 }
-                            }
                         )
                 }
                 
