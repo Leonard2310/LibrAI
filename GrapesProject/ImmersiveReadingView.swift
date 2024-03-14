@@ -104,18 +104,22 @@ struct ImmersiveReadingView: View {
                                 if isPlaying {
                                     audioPlayer.pause()
                                 } else {
-                                    Task {
-                                        await AudioGeneration(textInput: audioPrompt) { path in
-                                            do {
-                                                if let path {
-                                                    let path_clean = stringURLcleaning(path_string: path)
-                                                    self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path_clean!))
+                                    if audioPlayer.currentTime == 0 {
+                                        Task {
+                                            await AudioGeneration(textInput: audioPrompt) { path in
+                                                do {
+                                                    if let path {
+                                                        let path_clean = stringURLcleaning(path_string: path)
+                                                        self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path_clean!))
+                                                    }
+                                                } catch {
+                                                    print(error.localizedDescription)
                                                 }
-                                            } catch {
-                                                print(error.localizedDescription)
+                                                audioPlayer.play()
                                             }
-                                            audioPlayer.play()
                                         }
+                                    } else {
+                                        audioPlayer.play()
                                     }
                                 }
                                 isPlaying.toggle()
