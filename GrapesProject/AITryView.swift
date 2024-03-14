@@ -66,10 +66,6 @@ struct AITryView: View {
             
             
         }
-        .onAppear(perform: {
-            let sound = Bundle.main.path(forResource: "speech", ofType: "mp3")
-            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-        })
     }
 }
 

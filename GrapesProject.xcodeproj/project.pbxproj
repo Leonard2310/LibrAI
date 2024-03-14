@@ -25,7 +25,6 @@
 		CE67F4BF2B9A19CE00E74112 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE67F4BE2B9A19CE00E74112 /* Book.swift */; };
 		CE67F4C62B9A207000E74112 /* shelley-frankenstein.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */; };
 		CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */ = {isa = PBXBuildFile; fileRef = CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */; };
-		CEA2F8522BA33BD200C39D43 /* speech.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CEA2F8512BA33BD200C39D43 /* speech.mp3 */; };
 		CEB0466B2B9B6E96006EF99E /* ImmersiveReadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */; };
 		CEB0466E2B9E5FEC006EF99E /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = CEB0466D2B9E5FEC006EF99E /* SwiftSoup */; };
 		CEFE3B612BA09DF80083D433 /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFE3B602BA09DF80083D433 /* Mouse.swift */; };
@@ -56,7 +55,6 @@
 		CE67F4BE2B9A19CE00E74112 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		CE67F4C42B9A207000E74112 /* shelley-frankenstein.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = "shelley-frankenstein.epub"; path = "GrapesProject/Books/shelley-frankenstein.epub"; sourceTree = SOURCE_ROOT; };
 		CE67F4C52B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; name = A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; path = GrapesProject/Books/A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub; sourceTree = SOURCE_ROOT; };
-		CEA2F8512BA33BD200C39D43 /* speech.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = speech.mp3; sourceTree = "<group>"; };
 		CEB0466A2B9B6E96006EF99E /* ImmersiveReadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveReadingView.swift; sourceTree = "<group>"; };
 		CEFE3B602BA09DF80083D433 /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
 		CEFE3B622BA09EDF0083D433 /* FuncUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncUtilities.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				CEFE3B642BA0A6860083D433 /* AIFuncUtilities.swift */,
 				CEFE3B6E2BA0B3770083D433 /* AITryView.swift */,
 				FBE808D12BA2162700FC77AC /* mousedescription1View.swift */,
-				CEA2F8512BA33BD200C39D43 /* speech.mp3 */,
 				4DBD4AD52B98CDE000E7EF91 /* Assets.xcassets */,
 				CEAFC0FD2B9B3FFE003A8D55 /* Books */,
 				4DBD4AD72B98CDE000E7EF91 /* Preview Content */,
@@ -219,7 +216,6 @@
 				4DBD4AD92B98CDE000E7EF91 /* Preview Assets.xcassets in Resources */,
 				CE67F4C72B9A207000E74112 /* A_Game_of_Thrones_A_Song_of_Ice_and_Fire_1.epub in Resources */,
 				4DBD4AD62B98CDE000E7EF91 /* Assets.xcassets in Resources */,
-				CEA2F8522BA33BD200C39D43 /* speech.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
