@@ -75,7 +75,7 @@ struct LibraryView: View {
                                             .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
                                     }
                                     .fullScreenCover(isPresented: $sheetvision2) {
-                                        ImmersiveReadingView()
+                                        ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))
                                         
                                     }
                                 }

@@ -27,7 +27,7 @@ struct AllBooksView: View {
                     ForEach(FilteredBooks) {
                         Book in
                         VStack{
-                            NavigationLink(destination: ImmersiveReadingView()) {
+                            NavigationLink(destination: ImmersiveReadingView(Booktest: book(title: Book.title, lastBackground: Book.lastBackground))) {
                                 Image (Book.cover)
                                     .resizable()
                                 //.aspectRatio(contentMode: .fit)
