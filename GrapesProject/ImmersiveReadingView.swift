@@ -11,11 +11,11 @@ import AVFAudio
 struct ImmersiveReadingView: View {
     @State private var showingSheet = false
     @State private var RectReadingHeight: CGFloat = 263.0
-    //@GestureState private var dragOffset = CGSize.zero
     @State private var isDragging = false
-    @Environment(\.dismiss) var dismiss
-    
+    @State private var isPlaying = false
     @State private var audioPlayer: AVAudioPlayer!
+    
+    @Environment(\.dismiss) var dismiss
     
     var Booktest : book
     
@@ -100,23 +100,27 @@ struct ImmersiveReadingView: View {
                             .frame(width: 25.0, height: 25.0)
                             .foregroundColor(.white)
                             
-                            Button("", systemImage: "play.fill") {
-                                audioPlayer.pause()
-                                Task {
-                                    await AudioGeneration(textInput: audioPrompt) { path in
-                                        do {
-                                            
-                                            if let path {
-                                                let path_clean = stringURLcleaning(path_string: path)
-                                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path_clean!))
+                            Button(action: {
+                                if isPlaying {
+                                    audioPlayer.pause()
+                                } else {
+                                    Task {
+                                        await AudioGeneration(textInput: audioPrompt) { path in
+                                            do {
+                                                if let path {
+                                                    let path_clean = stringURLcleaning(path_string: path)
+                                                    self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path_clean!))
+                                                }
+                                            } catch {
+                                                print(error.localizedDescription)
                                             }
-                                        } catch {
-                                            print(error.localizedDescription)
+                                            audioPlayer.play()
                                         }
-                                        audioPlayer.play()
                                     }
                                 }
-                                
+                                isPlaying.toggle()
+                            }) {
+                                Image(systemName: isPlaying ? "pause.fill" : "play.fill")
                             }
                             .frame(width: 40.0, height: 40.0)
                             .foregroundColor(.white)
