@@ -43,7 +43,24 @@ struct LibraryView: View {
                                 }) {
                                     ZStack {
                                         if Book.urlCover != nil{
-                                            AsyncImage(url: Book.urlCover)
+                                            AsyncImage(url: Book.urlCover){phase in 
+                                                
+                                                if let image = phase.image{
+                                                    image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                                    .frame(width: 115, height: 182)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 3))
+                                                } else if phase.error != nil {
+                                                    // In caso di errore
+                                                    Text("Errore durante il caricamento dell'immagine")
+                                                } else {
+                                                    // Durante il caricamento
+                                                    ContentView()
+                                                }
+                                                    
+                                            }
+                                                
                                         }else{
                                             Image(Book.cover)
                                                 .resizable()
