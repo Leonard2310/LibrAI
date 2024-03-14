@@ -10,7 +10,7 @@ struct AITryView: View {
     
     @State private var imageURL: URL?
     @State private var audioURL: URL?
-    @State private var audioPlayer: AVPlayer?
+    @State private var audioPlayer: AVAudioPlayer!
     
     var body: some View {
         VStack(spacing: 20) {
@@ -35,15 +35,41 @@ struct AITryView: View {
             }
             
             Button("Audio Generation") {
+                audioPlayer.pause()
                 Task {
                     await AudioGeneration(textInput: audioPrompt) { path in
-                        if let path = path {
-                            playSound(path: path)
+                        do {
+                            if let path {
+                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                            }
+                        } catch {
+                            print(error.localizedDescription)
                         }
+                        audioPlayer.play()
                     }
                 }
+                
             }
+            
+            Button(action: {
+                audioPlayer.play()
+            }, label: {
+                Text("Play local")
+            })
+            
+            
+            Button(action: {
+                audioPlayer.pause()
+            }, label: {
+                Text("Pause local")
+            })
+            
+            
         }
+        .onAppear(perform: {
+            let sound = Bundle.main.path(forResource: "speech", ofType: "mp3")
+            self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        })
     }
 }
 
