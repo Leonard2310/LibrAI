@@ -1,7 +1,7 @@
 <table>
   <tr>
+    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/5e756230-7a5f-4d9d-842b-ee95e885b95f" width="50" height="50"></td>
     <td><h1>LibrAI: Immersive Audiobook Experience</h1></td>
-    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/5e756230-7a5f-4d9d-842b-ee95e885b95f" width="100" height="100"></td>
   </tr>
 </table>
 
@@ -39,10 +39,11 @@ We welcome contributions to **LibrAI**. If you have suggestions or want to contr
 ## Authors
 <table>
   <tr>
+    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba" width="25" height="25"></td>
     <td><h3>GRAPES</h3></td>
-    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba" width="100" height="100"></td>
   </tr>
 </table>
+
 - [Leonardo Catello](https://github.com/Leonard2310) 
 - [Lorenzo Manco](https://github.com/Rasbon99)
 - [Salvatore Cangiano](https://github.com/Salvr28) 
