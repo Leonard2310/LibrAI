@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct CollectablesView: View {
     
     var myData = SharedData()
+    @State private var selectedMouse: mouse?
     
     var body: some View {
         let rows = [GridItem(.fixed(160)), GridItem(.fixed(160))]
@@ -21,20 +24,25 @@ struct CollectablesView: View {
                     .padding(.leading, 11.0)
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
-                            ForEach(myData.Mice) {
-                                Mouse in
-                                VStack{
-                                    Image(Mouse.mouseImage)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .mask(Circle())
-                                        .frame(width: 130, height: 130)
-                                        .padding(.leading, 11.0)
-                                        .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                    Text(Mouse.mouseName)
-                                        .padding(.leading, 11.0)
-                                }
+                        ForEach(myData.Mice) { Mouse in
+                            VStack{
+                                Image(Mouse.mouseImage)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .mask(Circle())
+                                    .frame(width: 130, height: 130)
+                                    .padding(.leading, 11.0)
+                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
+                                    .onTapGesture {
+                                        selectedMouse = Mouse
+                                    }
+                                Text(Mouse.mouseName)
+                                    .padding(.leading, 11.0)
                             }
+                            .sheet(item: $selectedMouse) { mouse in
+                                MouseDescriptionView(mouse: mouse)
+                            }
+                        }
                     }
                 }
                 Text("App Challenges")
