@@ -19,14 +19,14 @@ struct mousedescription11View: View {
                     .shadow(radius: 10)
                     .padding()
                 VStack{
-                    Text("Alex the junior reader")
+                    Text("Star Wars Mouse")
                         .font(.body)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("Challenge: read 10 books")
+                        .multilineTextAlignment(.center)
+                    Text("Challenge: read 10 books about aliens")
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
+                        .multilineTextAlignment(.center)
                 }//MARK: End of VStack
             }//MARK: End of HStack
                 VStack {
@@ -34,7 +34,7 @@ struct mousedescription11View: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("Congratulations you have finished reading 10 books. This is Alex, our red hair junior reader. ")
+                    Text("Congratulations you have finished reading 10 books. This is Anakin Skycheese, our hooded mouse reader. ")
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                     Text("Why don't you read your next book together?")

@@ -19,14 +19,14 @@ struct mousedescription14View: View {
                     .shadow(radius: 10)
                     .padding()
                 VStack{
-                    Text("Alex the junior reader")
+                    Text("Giovanni the Bug Fixer Mouse")
                         .font(.body)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("Challenge: read 10 books")
+                        .multilineTextAlignment(.center)
+                    Text("Challenge: Report a Bug")
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
+                        .multilineTextAlignment(.center)
                 }//MARK: End of VStack
             }//MARK: End of HStack
                 VStack {
@@ -34,11 +34,7 @@ struct mousedescription14View: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("Congratulations you have finished reading 10 books. This is Alex, our red hair junior reader. ")
-                        .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
-                    Text("Why don't you read your next book together?")
-                        .font(.body)
+                    Text("Congratulations you have just reported a bug. We already know we're not perfect, but we're trying to be.")
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                 }//MARK: End of VStack

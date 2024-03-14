@@ -22,11 +22,11 @@ struct mousedescription3View: View {
                     Text("The Little Prince Mouse: the dreamy rodent and the rose")
                         .font(.body)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.leading)
-                    Text("The Little Prince")
+                        .multilineTextAlignment(.center)
+                    Text("“The Little Prince”")
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
+                        .multilineTextAlignment(.center)
                 }//MARK: End of VStack
             }//MARK: End of HStack
                 VStack {
@@ -34,13 +34,18 @@ struct mousedescription3View: View {
                         .font(.body)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
-                    Text("Congratulations you have finished reading the book The Little Prince. ")
+                    Text("Congratulations you have finished reading the book “The Little Prince”. ")
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
+                    Text("")
                     Text("Prepare your miniature aviator’s cap, dear dreamer! You’ve soared through the celestial pages of Antoine de Saint-Exupéry’s enchanting tale, the echo of rose petals, the laughter of stars, and the poignant wisdom of a child’s heart. As you close the final chapter of “The Little Prince,” a golden comet ignites in your heart, a beacon of wonder that transcends galaxies.")
                         .font(.body)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
+                    Text("")
+                    Text("The Little Prince Mouse’s Quest is not merely ink on parchment; it’s a cosmic odyssey of innocence and revelation. His eyes, wide as the Milky Way, hold secrets whispered by asteroids and meteor showers.He journeys from his asteroid home, B-612, across the constellations, meeting quirky characters along the way. Earth, with its bustling cities and perplexing grown-ups, beckons to him.So don your invisible cloak, dear reader, and may your dreams dance among shooting stars and rose-scented galaxies. 🌠🌹")
+                    Text("")
+                    Text("Note: the Little Prince Mouse’s legacy orbits eternity, and his laughter echoes across infinity. ")
                 }//MARK: End of VStack
         Spacer()
         
