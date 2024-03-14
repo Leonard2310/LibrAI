@@ -102,7 +102,7 @@ struct LibraryView: View {
                         
                         
                         //Creo un EpubDocument
-                        var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL) ?? <#default value#>
+                        var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL)! 
                         
                         //chiamo le utilities per creare il book obj
                         
