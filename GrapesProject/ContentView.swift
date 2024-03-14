@@ -21,7 +21,6 @@ struct ContentView: View {
                 .frame(width: 200, height: 200)
                 .clipShape(Circle())
                 .opacity(opacity)
-                .rotationEffect(.degrees(rotation))
                 .scaleEffect(scale)
                 .onAppear {
                     withAnimation(Animation

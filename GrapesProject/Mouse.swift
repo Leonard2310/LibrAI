@@ -11,4 +11,6 @@ struct mouse: Identifiable{
     var id = UUID()
     var mouseName: String
     var mouseImage: String
+    var mouseDescription: String = "no description avaiable"
+    var mouseSubtitle: String = ""
 }

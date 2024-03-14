@@ -12,6 +12,7 @@ struct CollectablesView: View {
     var myData = SharedData()
     
     var body: some View {
+        let raws = [GridItem(.fixed(90)), GridItem(.fixed(90))]
         NavigationStack {
             VStack(alignment: .leading) {
                 Text("Last Earned")
@@ -19,38 +20,23 @@ struct CollectablesView: View {
                     .fontWeight(.bold)
                     .padding(.leading, 11.0)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack{
-                        ForEach(myData.Mice1) {
-                            Mouse in
-                            VStack{
-                                Image(Mouse.mouseImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask(Circle())
-                                    .frame(width: 130, height: 130)
-                                    .padding(.leading, 11.0)
-                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                Text(Mouse.mouseName)
-                                    .padding(.leading, 11.0)
+                    LazyHGrid(rows: raws) {
+                        HStack{
+                            ForEach(myData.Mice1) {
+                                Mouse in
+                                VStack{
+                                    Image(Mouse.mouseImage)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .mask(Circle())
+                                        .frame(width: 130, height: 130)
+                                        .padding(.leading, 11.0)
+                                        .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
+                                    Text(Mouse.mouseName)
+                                        .padding(.leading, 11.0)
+                                }
                             }
                         }
-                    }
-                    HStack{
-                        ForEach(myData.Mice2) {
-                            Mouse in
-                            VStack{
-                                Image(Mouse.mouseImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask(Circle())
-                                    .frame(width: 130, height: 130)
-                                    .padding(.leading, 11.0)
-                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                Text(Mouse.mouseName)
-                                    .padding(.leading, 11.0)
-                            }
-                }
-            
                     }
                 }
                 Text("App Challenges")
