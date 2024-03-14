@@ -42,11 +42,15 @@ struct LibraryView: View {
                                     self.sheetvision2.toggle()
                                 }) {
                                     ZStack {
-                                        Image(Book.cover)
-                                            .resizable()
-                                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                                            .frame(width: 115, height: 182)
-                                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        if Book.urlCover != nil{
+                                            AsyncImage(url: Book.urlCover)
+                                        }else{
+                                            Image(Book.cover)
+                                                .resizable()
+                                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                                .frame(width: 115, height: 182)
+                                                .clipShape(RoundedRectangle(cornerRadius: 3))
+                                        }
                                         Image("bookBase")
                                             .resizable()
                                             .frame(width: 115, height: 182)
@@ -98,8 +102,6 @@ struct LibraryView: View {
                         let fileURL = try result.get().first!
                         print("Importato un file da: \(fileURL)")
                         self.selectedFile = fileURL
-                        
-                        
                         
                         //Creo un EpubDocument
                         var eDocument: EPUBDocument = loadEPUBDocument(from: fileURL)! 
