@@ -7,3 +7,4 @@ GrapesProject.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolve
 GrapesProject/Info.plist
 GrapesProject/Info.plist
 *.plist
+*.plist
