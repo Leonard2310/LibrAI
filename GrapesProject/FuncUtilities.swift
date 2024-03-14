@@ -116,6 +116,19 @@ func indexFromEPub(document: EPUBDocument) -> [String]? {
     return CHarray.isEmpty ? nil : CHarray
 }
 
+func stringURLcleaning(path_string : String) -> String? {
+    var temp = path_string
+    temp.removeFirst()
+    temp.removeFirst()
+    temp.removeFirst()
+    temp.removeFirst()
+    temp.removeFirst()
+    temp.removeFirst()
+    temp.removeFirst()
+    
+    return temp
+}
+
 
 
 

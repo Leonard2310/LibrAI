@@ -49,7 +49,7 @@ struct BookCardView: View {
                     }
                             
                     } .fullScreenCover(isPresented: $sheetvision2) {
-                      //  ImmersiveReadingView()
+                        ImmersiveReadingView(Booktest: GrapesProject.book(title: book.title, lastBackground: book.lastBackground))
                     
                 }
                 VStack (alignment: .leading){

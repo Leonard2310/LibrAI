@@ -39,8 +39,20 @@ struct AITryView: View {
                 Task {
                     await AudioGeneration(textInput: audioPrompt) { path in
                         do {
+                            
                             if let path {
-                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                                var temp = path
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                temp.removeFirst()
+                                print("now")
+                                print(temp)
+                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: temp))
+                                print("SONO QUI")
                             }
                         } catch {
                             print(error.localizedDescription)
@@ -68,6 +80,8 @@ struct AITryView: View {
         }
         .onAppear(perform: {
             let sound = Bundle.main.path(forResource: "speech", ofType: "mp3")
+            print("working")
+            print(sound)
             self.audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         })
     }

@@ -15,14 +15,12 @@ struct ImmersiveReadingView: View {
     @State private var isDragging = false
     @Environment(\.dismiss) var dismiss
     
-    @State private var imageURL: URL?
-    @State private var audioURL: URL?
     @State private var audioPlayer: AVAudioPlayer!
     
     var Booktest : book
     
     var audioPrompt : String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
-
+    
     
     var body: some View {
         ZStack{
@@ -103,15 +101,14 @@ struct ImmersiveReadingView: View {
                             .foregroundColor(.white)
                             
                             Button("", systemImage: "play.fill") {
-                                if audioPlayer != nil {
-                                    audioPlayer!.pause()
-                                }
+                                audioPlayer.pause()
                                 Task {
-                                    audioPlayer.pause()
                                     await AudioGeneration(textInput: audioPrompt) { path in
                                         do {
+                                            
                                             if let path {
-                                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                                                let path_clean = stringURLcleaning(path_string: path)
+                                                self.audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path_clean!))
                                             }
                                         } catch {
                                             print(error.localizedDescription)
@@ -141,7 +138,7 @@ struct ImmersiveReadingView: View {
                     .padding(.bottom)
                     .padding(.leading, -10)
                     ProgressView(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/)
-                        //.padding(.leading)
+                    //.padding(.leading)
                         .padding(.top, 40)
                         .frame(width: 270.0)
                         .progressViewStyle(LinearProgressViewStyle(tint: .white))
