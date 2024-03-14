@@ -39,7 +39,7 @@ We welcome contributions to **LibrAI**. If you have suggestions or want to contr
 ## Authors
 <table>
   <tr>
-    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba" width="25" height="25"></td>
+    <td><img src="https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba" width="50" height="50"></td>
     <td><h3>GRAPES</h3></td>
   </tr>
 </table>
