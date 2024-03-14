@@ -38,12 +38,12 @@ class SharedData {
     ]
     
     var Mice2 = [
-        mouse(mouseName: "Pirate Mouse", mouseImage: "Pirate Mouse"),
-        mouse(mouseName: "King Mouse", mouseImage: "KingMouse"),
-        mouse(mouseName: "Darth Mouse", mouseImage: "DarthMouse"),
-        mouse(mouseName: "Magic Mouse", mouseImage: "Magic Mouse"),
-        mouse(mouseName: "Unicorn Mouse", mouseImage: "unicorn mouse"),
-        mouse(mouseName: "Wizard Of OZ Mouse", mouseImage: "wizard of oz Mouse")
+        mouse(mouseName: "Sherlock Mouse", mouseImage: "ds2"),
+        mouse(mouseName: "Narnia Mouse", mouseImage: "narnia2"),
+        mouse(mouseName: "Fantasy Mouse", mouseImage: "ff1"),
+        mouse(mouseName: "Explorer Mouse", mouseImage: "80days"),
+        mouse(mouseName: "Lost World Mouse", mouseImage: "lostworld"),
+        mouse(mouseName: "Eragon Mouse", mouseImage: "eragon3")
     ]
     
     var ChallengeMice = [
