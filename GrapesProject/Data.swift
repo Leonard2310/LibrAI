@@ -28,23 +28,21 @@ class SharedData {
         book(title: "Harry Potter 3", cover: "HPIII", author: "J. K. Rowling",lastBackground: "HPIII_Background")
     ]
     
-    var Mice1 = [
+    var Mice = [
         mouse(mouseName: "Pirate Mouse", mouseImage: "Pirate Mouse"),
         mouse(mouseName: "King Mouse", mouseImage: "KingMouse"),
         mouse(mouseName: "Darth Mouse", mouseImage: "DarthMouse"),
         mouse(mouseName: "Magic Mouse", mouseImage: "Magic Mouse"),
         mouse(mouseName: "Unicorn Mouse", mouseImage: "unicorn mouse"),
-        mouse(mouseName: "Wizard Of OZ Mouse", mouseImage: "wizard of oz Mouse")
+        mouse(mouseName: "Wizard Of OZ Mouse", mouseImage: "wizard of oz Mouse"),
+        mouse(mouseName: "Sherlock Mouse", mouseImage: "ds2"),
+        mouse(mouseName: "Narnia Mouse", mouseImage: "narnia2"),
+        mouse(mouseName: "Fantasy Mouse", mouseImage: "ff1"),
+        mouse(mouseName: "Explorer Mouse", mouseImage: "80days"),
+        mouse(mouseName: "Lost World Mouse", mouseImage: "lostworld"),
+        mouse(mouseName: "Eragon Mouse", mouseImage: "eragon3")
     ]
     
-    var Mice2 = [
-        mouse(mouseName: "Pirate Mouse", mouseImage: "Pirate Mouse"),
-        mouse(mouseName: "King Mouse", mouseImage: "KingMouse"),
-        mouse(mouseName: "Darth Mouse", mouseImage: "DarthMouse"),
-        mouse(mouseName: "Magic Mouse", mouseImage: "Magic Mouse"),
-        mouse(mouseName: "Unicorn Mouse", mouseImage: "unicorn mouse"),
-        mouse(mouseName: "Wizard Of OZ Mouse", mouseImage: "wizard of oz Mouse")
-    ]
     
     var ChallengeMice = [
         mouse(mouseName: "Rich Mouse", mouseImage: "RichMouse"),

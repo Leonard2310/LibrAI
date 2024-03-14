@@ -12,6 +12,7 @@ struct CollectablesView: View {
     var myData = SharedData()
     
     var body: some View {
+        let rows = [GridItem(.fixed(160)), GridItem(.fixed(160))]
         NavigationStack {
             VStack(alignment: .leading) {
                 Text("Last Earned")
@@ -19,40 +20,21 @@ struct CollectablesView: View {
                     .fontWeight(.bold)
                     .padding(.leading, 11.0)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack{
-                        ForEach(myData.Mice1) {
-                            Mouse in
-                            VStack{
-                                Image(Mouse.mouseImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask(Circle())
-                                    .frame(width: 130, height: 130)
-                                    .padding(.leading, 11.0)
-                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                Text(Mouse.mouseName)
-                                    .padding(.leading, 11.0)
+                    LazyHGrid(rows: rows) {
+                            ForEach(myData.Mice) {
+                                Mouse in
+                                VStack{
+                                    Image(Mouse.mouseImage)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .mask(Circle())
+                                        .frame(width: 130, height: 130)
+                                        .padding(.leading, 11.0)
+                                        .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
+                                    Text(Mouse.mouseName)
+                                        .padding(.leading, 11.0)
+                                }
                             }
-                        }
-                    }
-                }
-            
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack{
-                        ForEach(myData.Mice2) {
-                            Mouse in
-                            VStack{
-                                Image(Mouse.mouseImage)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .mask(Circle())
-                                    .frame(width: 130, height: 130)
-                                    .padding(.leading, 11.0)
-                                    .foregroundStyle(.blue.gradient.shadow(.inner(color: .white.opacity(0.3), radius: 3, x: 1, y: 1)))
-                                Text(Mouse.mouseName)
-                                    .padding(.leading, 11.0)
-                            }
-                        }
                     }
                 }
                 Text("App Challenges")
@@ -67,13 +49,12 @@ struct CollectablesView: View {
                                 ZStack{
                                     Image(Mouse.mouseImage)
                                         .resizable()
-                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 120, height: 130)
                                         .mask(Circle())
-                                        .frame(width: 130, height: 130)
                                         .padding(.leading, 11.0)
                                         .blur(radius: 3)
                                     Label("", systemImage: "lock.fill")
-                                        .padding(.leading, 15)
+                                        .padding(.leading, 17)
                                 }
                                 Text(Mouse.mouseName)
                                     .padding(.leading, 11.0)

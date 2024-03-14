@@ -5,6 +5,7 @@ import EPUBKit
 struct LibraryView: View {
     var Mydata = sharedData
     @State private var sheetvision = false
+    @State private var sheetvision2 = false
     @State var searchText = ""
     @State private var isSearching = false
     @State private var selectedFile: URL?
@@ -22,7 +23,6 @@ struct LibraryView: View {
                     NavigationLink(destination: AllBooksView()){
                         Rectangle()
                             .foregroundStyle(Color.clear)
-                            
                     }
                     HStack {
                         Text("Your Books")
@@ -44,6 +44,10 @@ struct LibraryView: View {
                                         if Book.urlCover != nil {
                                             AsyncImage(url: Book.urlCover)
                                         }else{
+                                Button(action: {
+                                    self.sheetvision2.toggle()
+                                }) {
+                                        ZStack {
                                             Image(Book.cover)
                                                 .resizable()
                                                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
@@ -55,8 +59,17 @@ struct LibraryView: View {
                                             .frame(width: 115, height: 182)
                                             .clipShape(RoundedRectangle(cornerRadius: 3))
                                             .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                                            Image("bookBase")
+                                                .resizable()
+                                                .frame(width: 115, height: 182)
+                                                .clipShape(RoundedRectangle(cornerRadius: 3))
+                                                .blendMode(/*@START_MENU_TOKEN@*/.plusDarker/*@END_MENU_TOKEN@*/)
+                                        }
+                                        .fullScreenCover(isPresented: $sheetvision2) {
+                                            ImmersiveReadingView()
+                                                
+                                        }
                                     }
-                                }
                                 Text (Book.title)
                                     .font(.footnote)
 
@@ -78,7 +91,7 @@ struct LibraryView: View {
 
                 ForEach(Mydata.LastReadBooks) {
                     Book in
-                    BookCardView(book: book(title: Book.title,cover: Book.cover,author: Book.author, lastBackground: Book.lastBackground))
+                    BookCardView(book: book(title: Book.title, cover: Book.cover, author: Book.author, lastBackground: Book.lastBackground))
                 }
                 .padding(.bottom, 80.0)
             }
