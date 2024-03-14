@@ -19,27 +19,30 @@ struct MouseDescriptionView: View {
                     .frame(width: 150, height: 150)
                     .clipShape(Circle())
                     .shadow(radius: 10)
-                    .padding()
-                VStack{
+                    .padding([.leading, .top])
+                VStack(alignment: .leading, spacing: 10){
                     Text(mouse.mouseName)
-                        .font(.body)
+                        .font(.title2)
                         .fontWeight(.bold)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                     Text(mouse.mouseSubtitle)
                         .font(.body)
                         .fontWeight(.regular)
-                        .multilineTextAlignment(.center)
+                        .multilineTextAlignment(.leading)
                 }
+                .padding(.trailing)
             }
-            VStack {
+            VStack(alignment: .leading, spacing: 10) {
                 Text("Description:")
-                    .font(.body)
+                    .font(.title2)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
                 Text(mouse.mouseDescription)
+                    .font(.body)
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
             }
+            .padding([.leading, .trailing])
             Spacer()
         }
     }

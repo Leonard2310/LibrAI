@@ -17,10 +17,17 @@ struct ImmersiveReadingView: View {
     
     @Environment(\.dismiss) var dismiss
     
+    @State private var currentSentence = 0
+    
+    
     var Booktest : book
     
-    var audioPrompt : String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer.\nThey set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement.\nThis was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done."
+    var audioPrompt : String = "The morning had dawned clear and cold, with a crispness that hinted at the end of summer. They set forth at daybreak to see a man beheaded, twenty in all, and Bran rode among them, nervous with excitement. This was the first time he had been deemed old enough to go with his lord father and his brothers to see the king’s justice done. It was the ninth year of summer, and the seventh of Bran’s life.The man had been taken outside a small holdfast in the hills. Robb thought he was a wildling, his sword sworn to Mance Rayder, the King-beyond-the-Wall. It made Bran’s skin prickle to think of it. He remembered the hearth tales Old Nan told them. The wildlings were cruel men, she said, slavers and slayers and thieves. They consorted with giants and ghouls, stole girl children in the dead of night, and drank blood from polished horns. \nAnd their women lay with the Others in the Long Night to sire terrible half-human children. But the man they found bound hand and foot to the holdfast wall awaiting the king’s justice was old and scrawny, not much taller than Robb. He had lost both ears and a finger to frostbite, and he dressed all in black, the same as a brother of the Night’s Watch, except that his furs were ragged and greasy. The breath of man and horse mingled, steaming, in the cold morning air as his lord father had the man cut down from the wall and dragged before them. Robb and Jon sat tall and still on their horses, with Bran between them on his pony, trying to seem older than seven, trying to pretend that he’d seen all this before. A faint wind blew through the holdfast gate. Over their heads flapped the banner of the Starks of Winterfell: a grey direwolf racing across an ice-white field.”"
     
+    
+    var sentences: [String] {
+        audioPrompt.components(separatedBy: ". ")
+    }
     
     var body: some View {
         ZStack{
@@ -28,28 +35,24 @@ struct ImmersiveReadingView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+            
             VStack{
                 Spacer()
                 
                 ZStack (alignment: .top){
                     RoundedRectangle(cornerRadius: 25)
                         .fill(Color.readingRectangle)
-                        .frame(width: 337.0
-                               , height: RectReadingHeight)
+                        .frame(width: 337.0, height: RectReadingHeight)
                         .overlay(
-                            
-                            ScrollViewReader(content: { proxy in
-                                Text(audioPrompt)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .lineLimit(nil)
-                            })
-                            
-                            
-                            
+                            ScrollView {
+                                VStack {
+                                    Text(sentences.joined(separator: ".\n"))
+                                        .fontWeight(currentSentence == 0 ? .bold : .regular)
+                                        .foregroundColor(.white)
+                                }
+                                .padding()
+                            }
                         )
-                    
-                    
                     
                     Rectangle()
                         .fill(Color.white) // Customize the color as needed
