@@ -1,4 +1,5 @@
 # LibrAI: Immersive Audiobook Experience
+![AppLogo](https://github.com/Leonard2310/LibrAI/assets/71086591/5e756230-7a5f-4d9d-842b-ee95e885b95f)
 
 Welcome to **LibrAI**, an innovative iOS application that transforms your reading experience into an immersive journey. Written in Swift, this app is designed to be your personal audible book companion, complete with AI-generated images and text-to-speech functionality to bring stories to life. As you dive into your favorite books, **LibrarAI** enhances each session with vivid imagery and expressive narration, crafted by advanced AI algorithms.
 
@@ -32,6 +33,7 @@ We welcome contributions to **LibrAI**. If you have suggestions or want to contr
 (Work in Porgress)
 
 ## Authors
+GRAPES ![Logo](https://github.com/Leonard2310/LibrAI/assets/71086591/a95ca5c3-cbc5-40d7-86cd-d58f6c4a8eba)
 - [Leonardo Catello](https://github.com/Leonard2310) 
 - [Lorenzo Manco](https://github.com/Rasbon99)
 - [Salvatore Cangiano](https://github.com/Salvr28) 
